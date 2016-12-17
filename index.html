@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="utf-8">
+        <style>
+            * {
+                font-family: arial;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table th, table td {
+                border-style: double;
+                padding: 6px;
+                text-align: center;
+            }
+            .active{
+                color: limegreen;
+            }
+            .inactive{
+                color: red;
+            }
+            .container {
+                width: 100%;
+            }
+            .content{
+                width: 90%;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <p>Welcome to obrassard's repository. Here's the list of available websites:</p>
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                        <th>LINK</th>
+                        <th>STATUS</th> 
+                    </tr>
+                    <tr>
+                        <td>Projet Html</td>
+                        <td>Un site créé dans le cadre du cour porfession informatique, CEGEP 1ere session</td>
+                        <td><a href="./projethtml">./projethtml</a></td>
+                        <td><span class="active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Bash Calculator</td>
+                        <td>The website of my github bash_calculator repository</td>
+                        <td><a href="./bashcalculator">./bashcalculator</a></td>
+                        <td><span class="inactive">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Bash Calculator (français)</td>
+                        <td>Le site web de mon projet github bash_calculator</td>
+                        <td><a href="./bashcalculator/fr">./bashcalculator/fr</a></td>
+                        <td><span class="inactive">Active</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
