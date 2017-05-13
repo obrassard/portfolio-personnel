@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Olivier Brassard">
 
-    <title>Welcome - Olivier Brassard</title>
+    <title>Olivier Brassard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -134,8 +134,9 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>About me</h2>
-                    <p>Hello world ! I'm a Canadian student in computer science and this is the portfolio of my personnal projects.
+                    <h2 style="margin-bottom: 25px">About me</h2>
+                    <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="./img/me.png" width="200" alt="Photo de moi"></a>
+                    <p id="no-margin">Hello world ! I'm a Canadian student in computer science and this is the portfolio of my personnal projects.
                     I really enjoy programming, therefore I am learning several languages including C#, Java, HTML, CSS, and Javascript.
                     The above projects - and this site itself - are "code experiments" that I decided to share with everyone who, like me, have a passion for coding !</p>
                 </div>
@@ -144,21 +145,43 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
+    <section id="contact" class="container content-section ">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2>Get in touch</h2>
                 <p>I like your feedback ! Give your opinion, suggest new project ideas, or just say hello !</p>
-                <p><a href="mailto:contact@obrassard.me">contact@obrassard.me</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
+                <!--<p><a href="mailto:contact@obrassard.me">contact@obrassard.me</a>
+                </p>-->
+            </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="_replyto">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message</label>
+                            <textarea class="form-control" id="message" name="message"></textarea>
+                        </div>
+                        <input type="hidden" name="_next" value="http://obrassard.github.io/en" />
+                        <input type="hidden" name="_subject" value="New message from your website!" />
+                    </form>
+                    <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oh snap!</strong> Please complete all fields.</div>
+                    <button class="btn btn-default pull-right" onclick="ValidateForm()">Send</button>
+                <!--<ul class="list-inline banner-social-buttons">
                     <li>
                         <a href="https://twitter.com/br4ss4rdo" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
                     <li>
                         <a href="https://github.com/obrassard" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
-                </ul>
+                </ul>-->
+
             </div>
         </div>
     </section>
@@ -170,6 +193,8 @@
             <span class="hidden-xs"><a style="float: right; color: #333333; font-size: 8px; text-decoration: underline;" href="./simplified.html">Accces the simplified html page</a></span>
         </div>
     </footer>
+
+    <script src="./js/contactform.js"></script>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
