@@ -38,15 +38,14 @@ function ValidateForm()
     }
     else {
         document.getElementById('email').style.border = "solid 2px red";
-
         emailOk=false;
     }
 
     //send if everything is ok
     if (emailOk && messageOk && nameOk)
     {
-        document.getElementById("contactForm").submit();
         document.getElementById("alert").style.display="none";
+        document.getElementById("contactForm").submit();
         return;
     }
     document.getElementById("alert").style.display="block";
