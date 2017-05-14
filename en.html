@@ -17,6 +17,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="css/fa-colored.css" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
     <link href="css/theme.css" rel="stylesheet">
@@ -153,8 +154,8 @@
                 <!--<p><a href="mailto:contact@obrassard.me">contact@obrassard.me</a>
                 </p>-->
             </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
                     <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -173,15 +174,7 @@
                     </form>
                     <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oh snap!</strong> Please complete all fields.</div>
                     <button class="btn btn-default pull-right" onclick="ValidateForm()">Send</button>
-                <!--<ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/br4ss4rdo" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/obrassard" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                </ul>-->
-
+                </div>
             </div>
         </div>
     </section>
@@ -189,6 +182,12 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
+            <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                <li><a href="http://github.com/obrassard"><i class="fa fa-github"></i></a> </li>
+                <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
+                <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
+                <li> <a href="mailto:contact@obrassard.me"><i class="fa fa-envelope"></i></a> </li>
+            </ul>
             <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
             <span class="hidden-xs"><a style="float: right; color: #333333; font-size: 8px; text-decoration: underline;" href="./simplified.html">Accces the simplified html page</a></span>
         </div>

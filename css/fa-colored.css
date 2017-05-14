@@ -19,10 +19,10 @@
 .social-icons .fa {
     width: 41px;
     height: 41px;
-    line-height: 40px;
+    line-height: 41px;
     text-align: center;
     color: #FFF;
-    color: rgba(255, 255, 255, 0.8);
+    /*color: rgba(255, 255, 255);*/
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -41,7 +41,7 @@
 }
 
 .social-icons .fa:hover, .social-icons .fa:active {
-    color: #FFF;
+    /*color: #FFF;*/
     -webkit-box-shadow: 1px 1px 3px #333;
     -moz-box-shadow: 1px 1px 3px #333;
     box-shadow: 1px 1px 3px #333;
@@ -53,13 +53,7 @@
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
-.social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active {
-    -webkit-transform: scale(1.1) rotate(360deg);
-    -moz-transform: scale(1.1) rotate(360deg);
-    -ms-transform: scale(1.1) rotate(360deg);
-    -o-transform: scale(1.1) rotate(360deg);
-    transform: scale(1.1) rotate(360deg);
-}
+
 
 .social-icons .fa-adn{background-color:#504e54;}
 .social-icons .fa-apple{background-color:#aeb5c5;}
@@ -72,7 +66,7 @@
 .social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}
 .social-icons .fa-flickr{background-color:#FF0084;}
 .social-icons .fa-foursquare{background-color:#0086BE;}
-.social-icons .fa-github,.social-icons .fa-github-alt,.social-icons .fa-github-square{background-color:#070709;}
+.social-icons .fa-github,.social-icons .fa-github-alt,.social-icons .fa-github-square{background-color: #fff; color: #000}
 .social-icons .fa-google-plus,.social-icons .fa-google-plus-square{background-color:#CF3D2E;}
 .social-icons .fa-html5{background-color:#E54D26;}
 .social-icons .fa-instagram{background-color:#A1755C;}
@@ -91,6 +85,7 @@
 .social-icons .fa-vimeo-square{background-color:#229ACC;}
 .social-icons .fa-vk{background-color:#375474;}
 .social-icons .fa-weibo{background-color:#D72B2B;}
+.social-icons .fa-envelope{background-color:#D72B2B;}
 .social-icons .fa-windows{background-color:#12B6F3;}
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;}
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
