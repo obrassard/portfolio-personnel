@@ -1,9 +1,11 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto');
+
 body {
   width: 100%;
   height: 100%;
-  font-family: "Montserrat", "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   background-color: black;
 }
@@ -12,7 +14,10 @@ html {
   width: 100%;
   height: 100%;
 }
-h1,
+h1{
+  font-family:"Montserrat", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
 h2,
 h3,
 h4,
@@ -20,8 +25,7 @@ h5,
 h6 {
   margin: 0 0 35px;
   text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Raleway","Inconsolata", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
 }
 p {
@@ -54,8 +58,13 @@ a:focus {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: black;
+  font-weight: 600;
+}
+.navbar-nav{
+  font-weight: 500;
+  font-size: 15px;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -344,7 +353,7 @@ body {
 {
   margin-top:5px;
   font-size: 17px;
-  font-family: "Montserrat", 'Roboto', arial, sans-serif;
+  font-family: "Raleway", 'Roboto', arial, sans-serif;
   margin-bottom: 12px;
 }
 
@@ -379,7 +388,7 @@ body {
 }
 .description{
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 17px;
 }
 .bordered{
     border: 1px solid #ffffff;
