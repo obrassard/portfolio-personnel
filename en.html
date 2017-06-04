@@ -154,27 +154,25 @@
                 <!--<p><a href="mailto:contact@obrassard.me">contact@obrassard.me</a>
                 </p>-->
             </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="_replyto">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your message</label>
-                            <textarea class="form-control" id="message" name="message"></textarea>
-                        </div>
-                        <input type="hidden" name="_next" value="http://obrassard.github.io/en" />
-                        <input type="hidden" name="_subject" value="New message from your website!" />
-                    </form>
-                    <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oh snap!</strong> Please complete all fields.</div>
-                    <button class="btn btn-default pull-right" onclick="ValidateForm()">Send</button>
-                </div>
+            <div class="col-md-6 col-md-offset-3">
+                <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="_replyto">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message</label>
+                        <textarea class="form-control" id="message" name="message"></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="http://obrassard.github.io/en" />
+                    <input type="hidden" name="_subject" value="New message from your website!" />
+                </form>
+                <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oh snap!</strong> Please complete all fields.</div>
+                <button class="btn btn-default pull-right" onclick="ValidateForm()">Send</button>
             </div>
         </div>
     </section>
@@ -182,15 +180,17 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
-                <li><a href="http://github.com/obrassard"><i class="fa fa-github"></i></a> </li>
-                <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
-                <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
-                <li> <a href="mailto:contact@obrassard.me"><i class="fa fa-envelope"></i></a> </li>
-            </ul>
-            <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
-            <span class="hidden-xs"><a style="float: right; color: #333333; font-size: 8px; text-decoration: underline;" href="./simplified.html">Accces the simplified html page</a></span>
-        </div>
+            <div class="row">
+                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                    <li><a href="http://github.com/obrassard"><i class="fa fa-github"></i></a> </li>
+                    <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
+                    <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
+                    <li> <a href="mailto:contact@obrassard.me"><i class="fa fa-envelope"></i></a> </li>
+                </ul>
+                <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
+                <span class="hidden-xs"><a style="float: right; color: #333333; font-size: 8px; text-decoration: underline;" href="./simplified.html">Accces the simplified html page</a></span>
+            </div>
+            </div>
     </footer>
 
     <script src="./js/contactform.js"></script>

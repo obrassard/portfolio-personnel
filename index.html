@@ -159,27 +159,25 @@
                 <!--<p><a href="mailto:contact@obrassard.me">contact@obrassard.me</a>
                 </p>-->
             </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3" >
-                    <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" class="form-control" id="name" name="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Adresse Email</label>
-                            <input type="email" class="form-control" id="email" name="_replyto">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Votre message</label>
-                            <textarea class="form-control" id="message" name="message"></textarea>
-                        </div>
-                        <input type="hidden" name="_next" value="http://obrassard.github.io/" />
-                        <input type="hidden" name="_subject" value="New message from your website!" />
-                    </form>
-                    <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oups!</strong> Veuillez compléter tous les champs.</div>
-                    <button class="btn btn-default pull-right" onclick="ValidateForm()">Envoyer</button>
-                </div>
+            <div class="col-md-6 col-md-offset-3" >
+                <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" class="form-control" id="email" name="_replyto">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Votre message</label>
+                        <textarea class="form-control" id="message" name="message"></textarea>
+                    </div>
+                    <input type="hidden" name="_next" value="http://obrassard.github.io/" />
+                    <input type="hidden" name="_subject" value="New message from your website!" />
+                </form>
+                <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oups!</strong> Veuillez compléter tous les champs.</div>
+                <button class="btn btn-default pull-right" onclick="ValidateForm()">Envoyer</button>
             </div>
         </div>
     </section>
