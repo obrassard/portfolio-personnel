@@ -152,6 +152,10 @@ a:focus {
         background: url(../img/intro-bg-mobile.jpg) no-repeat bottom center scroll;
     }
 
+    .projets{
+      margin-bottom: 4px;
+    }
+
     a.navbar-brand.page-scroll{
         margin-top: 3px;
     }
@@ -182,6 +186,7 @@ a:focus {
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
+
 }
 .btn-circle {
   width: 70px;
