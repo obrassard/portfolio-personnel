@@ -103,7 +103,7 @@ a:focus {
   outline: none;
 }
 .navbar-custom .nav li.active a {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #430035
 }
 .navbar-custom .nav li.active a:hover {
   color: white;
@@ -120,8 +120,8 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: #1f0035;
+    border-bottom: 1px solid #430035
   }
 }
 #copyright{
