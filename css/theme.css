@@ -63,7 +63,8 @@ a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Raleway","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background: #1f0035;
+  border-bottom: 1px solid #430035;
   font-weight: 600;
 }
 .navbar-nav{
