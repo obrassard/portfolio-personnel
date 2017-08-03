@@ -182,6 +182,12 @@ a:focus {
     font-size: 125%;
   }
 
+  @media (max-width: 350px) {
+    .brand-logo{
+      display: none;
+    }
+  }
+
 }
 .intro .intro-body {
   display: table-cell;
