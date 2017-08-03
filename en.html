@@ -81,7 +81,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-8 col-md-offset-2 fadein" style="display: none">
                         <h1 class="shadow-header">welcome</h1>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -212,6 +212,14 @@
 
     <!-- Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('div.fadein').fadeIn(2350);
+        });
+    </script>
+
+
 
 </body>
 
