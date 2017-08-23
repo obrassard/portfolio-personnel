@@ -1,0 +1,22 @@
+
+html {
+    height: 100%
+}
+body{
+    padding-top: 80px;
+}
+
+@media (max-width: 992px){
+    body {
+        background-image:url("../img/lights.jpg");
+        background-size: auto;
+    }
+}
+
+@media (min-width: 992px){
+    body {
+        background-image:url("../img/lights.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
