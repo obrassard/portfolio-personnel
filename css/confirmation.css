@@ -1,22 +1,33 @@
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 html {
     height: 100%
 }
 body{
     padding-top: 80px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#310c40+0,3f105a+51,55167c+100 */
+
+    background: #45484d;
+    background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%);
+    background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 );
 }
 
-@media (max-width: 992px){
-    body {
-        background-image:url("../img/lights.jpg");
-        background-size: auto;
-    }
+h2, p{
+    font-family: Raleway;
 }
+/*@media (max-width: 992px){*/
+    /*body {*/
+        /*background-image:url("../img/lights.jpg");*/
+        /*background-size: auto;*/
+    /*}*/
+/*}*/
 
-@media (min-width: 992px){
-    body {
-        background-image:url("../img/lights.jpg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
-}
+/*@media (min-width: 992px){*/
+    /*body {*/
+        /*background-image:url("../img/lights.jpg");*/
+        /*background-repeat: no-repeat;*/
+        /*background-size: 100% 100%;*/
+    /*}*/
+/*}*/
