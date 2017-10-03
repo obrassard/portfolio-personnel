@@ -1,0 +1,217 @@
+/**
+ * Created by obrassard on 2017-09-28.
+ */
+
+/*-----------------------------------------------------------------------------------------
+-------------- Thème Général ---------------- ---------------------------------------------
+------------------------------------------------------------------------------------------*/
+html, body{
+    overflow-x: hidden
+}
+
+body{
+    padding-top: 55px;
+    font-family: Helvetica, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+h1,h2,h2,h4,h5,h6, p, label{
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+p{
+    text-align: justify;
+    font-size: 19px;
+}
+
+.btn-swift{
+    background: #f04927;
+    color: white;
+    border-color: #f04927;
+
+}
+.btn-swift:hover{
+    border-color: #f04927;
+}
+.btn-swift:active{
+    border-color: #f04927;
+    background: #fd2521
+}
+
+.container{
+    padding-top: 35px;
+    display: none;
+}
+
+/*-----------------------------------------------------------------------------------------
+-------------- Éléments du menu de navigation ---------------------------------------------
+------------------------------------------------------------------------------------------*/
+
+.bg-swift{
+    background-color: #f04927;
+    /*background: linear-gradient(to bottom, #f76222 0%,#f04927 49%,#fd2521 100%);*/
+}
+
+nav{
+    border-top: solid #ff8700 5px;
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 55px;
+    z-index: 1;
+}
+
+nav a{
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    color: antiquewhite;
+}
+
+.brand{
+
+    position: relative;
+    top:19%;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+/*Menus de premier niveau*/
+nav a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.active{
+    color: white;
+}
+
+.menu {
+    float: right;
+    padding-top: 4px;
+    padding-right: 15px;
+}
+.menu li
+{
+    display: inline-block;
+}
+
+/*Menus de second niveau*/
+.sous-menu{
+    display: none;
+    position: absolute;
+    padding: 0;
+    border: 1px solid rgba(0,0,0,0.25) ;
+}
+.sous-menu li{
+    display: block;
+}
+.dropdownItem{
+    border-top: 1px solid rgba(0,0,0,0.25);
+    display: block;
+    background: white;
+    color: black;
+    padding: 10px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.15);
+}
+
+.dropdownItem:hover{
+    color: #eb501e;
+}
+
+/*-----------------------------------------------------------------------------------------
+--------------- Footer --------------------------------------------------------------------
+------------------------------------------------------------------------------------------*/
+
+/*Position de base de l'oiseau en bas des pages*/
+#footer-logo-animable{
+    margin-top: 20px;
+    position: fixed;
+    right:50%;
+    display: block;
+    width: 30px
+}
+
+#footer-logo{
+    margin: 20px auto;
+    position: inherit;
+    display: block;
+    width: 30px
+}
+
+/*-----------------------------------------------------------------------------------------
+-------------- Éléments de la page d'accueil ----------------------------------------------
+------------------------------------------------------------------------------------------*/
+.diaporama{
+    background-color: #292B37;
+}
+
+.diaporama img {
+    max-width: 100%;
+    background-color: black;
+    display: block;
+}
+.diaporama img:not(:first-child){
+    display: none;
+}
+
+/*-----------------------------------------------------------------------------------------
+------------ Page d'inscription ------------------------------------------------------------
+------------------------------------------------------------------------------------------*/
+label{
+    font-size: 18px;
+}
+
+.alert{
+    margin-top:20px;
+    display: none;
+}
+
+label.error{
+    color: red;
+    font-size: 15px;
+    font-family: Inconsolata, monospace;
+    margin: 0;
+}
+
+input.error, textarea.error, input.error:focus, textarea.error:focus{
+    border: solid 1px red;
+}
+
+form{
+    margin-bottom: 20px;
+}
+
+#confirmation a{
+    position: absolute;
+    right: 30px;
+    top:29px;
+}
+
+/*-----------------------------------------------------------------------------------------
+-------------- Intégration du playground---------------------------------------------------
+------------------------------------------------------------------------------------------*/
+#playground
+{
+    position:absolute; left: 0; right: 0; bottom: 0; top: 0;
+
+}
+iframe{
+    overflow: hidden;
+}
+#playground ~ div{
+    position: relative;
+}
+
+/*LE PLAYGROUND N'EST PAS DISPONIBLE SUR PETITS ÉCRANS*/
+@media screen and (max-width: 768px){
+
+    .menu li:nth-child(4){
+        display: none;
+    }
+}
+
+
+
