@@ -1,6 +1,11 @@
+<?php
+require_once "data/db_projects.php";
+
+$projects = GetProjectsFr();
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="img/components.png">
@@ -23,12 +28,6 @@
     <!-- Theme CSS -->
     <link href="css/theme.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -68,7 +67,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="en.html"><i class="fa fa-language black" aria-hidden="true"></i> en</a>
+                        <a href="en.php"><i class="fa fa-language black" aria-hidden="true"></i> en</a>
                     </li>
                 </ul>
             </div>
@@ -117,36 +116,34 @@
             </div>
             <section id="portfolio">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 portfolio-item parent">
-                            <a href="http://projects.obrassard.ca/textcrypteronline/fr" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/textcrypterjs.png" class="img-responsive mobile-margin bw bordered" alt="apercu du site web">
-                            </a>
-                            <div title="Site Web disponible, lien actif"><div class="status hidden-xs"><span class="active">&#9679;</span>  Actif</div></div>
-                            <p class="description">
-                                Application web pour encoder et décoder des messages.
-                            </p>
-                        </div>
-                        <div class="col-sm-4 portfolio-item">
-                            <a href="http://projects.obrassard.ca/bashcalculator/fr" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/bashcalc.png" class="img-responsive mobile-margin bw bordered" alt="apercu du site web">
-                            </a>
-                            <div title="Site Web disponible, lien actif"><div class="status hidden-xs"><span class="active">&#9679;</span>  Actif</div></div>
-                            <p class="description">
-                                Effectuez des calculs mathématiques de base dans votre terminal bash.
-                            </p>
+                    <?php
+                    $cpt = 0;
 
-                        </div>
+                    foreach ( $projects as $oneproject ) {
+                        if($cpt == 0) { echo "<div class='row'>";} ?>
+
                         <div class="col-sm-4 portfolio-item">
-                            <a href="http://github.com/obrassard/exbot" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/exbot.png" class="img-responsive mobile-margin bw bordered" alt="apercu du code">
+                            <a href="<?php echo $oneproject['Url'] ?>" class="portfolio-link" data-toggle="modal">
+                                <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="image du projet">
                             </a>
-                            <div title="Projet Actif"><div class="status hidden-xs"><span class="active">&#9679;</span>  Actif</div></div>
                             <p class="description">
-                                Exbot : une extension de Robot API.
+                                <?php echo $oneproject['Description'] ?>
                             </p>
                         </div>
-                    </div>
+
+                        <?php
+                        $cpt++;
+                        if($cpt == 3){
+                            echo "</div>";
+                            $cpt = 0;
+                        }
+                    }
+                    if ($cpt != 0) {
+                        echo "</div>";
+                    }
+
+                    ?>
+
                 </div>
             </section>
         </div>
@@ -160,8 +157,6 @@
                 <h2>Contactez-moi</h2>
                 <p>Vous voulez me donner votre opinion, me suggérer des idées de projet ou simplement me dire bonjour ? Eh bien, contactez-moi !</p>
 
-                <!--<p><a href="mailto:contact@obrassard.me">contact@obrassard.me</a>
-                </p>-->
             </div>
             <div class="col-md-6 col-md-offset-3" >
                 <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
@@ -196,7 +191,6 @@
                 <li> <a href="mailto:contact@obrassard.me"><i class="fa fa-envelope"></i></a> </li>
             </ul>
             <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
-          <span class="hidden-xs"><a style="float: right; color: #333333; font-size: 8px; text-decoration: underline;" href="./simplified.html">Accéder au site HTML simplifié</a></span>
         </div>
     </footer>
 

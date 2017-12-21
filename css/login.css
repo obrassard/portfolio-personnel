@@ -1,0 +1,33 @@
+/*====== Page de login ========*/
+
+.login{
+    margin: 100px auto;
+    -webkit-box-shadow: 7px 7px 33px -6px rgba(0,0,0,0.24);
+    -moz-box-shadow: 7px 7px 33px -6px rgba(0,0,0,0.24);
+    box-shadow: 7px 7px 33px -6px rgba(0,0,0,0.24);
+}
+
+body.loginPage {
+
+    background: #1941a7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #1CB5E0, #1941a7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #1CB5E0, #1941a7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 606px){
+
+    .login{
+        margin-top: 5px !important;
+        width: 20rem !important;
+    }
+
+}

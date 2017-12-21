@@ -1,3 +1,9 @@
+<?php
+require_once "data/db_projects.php";
+
+$projects = GetProjectsEn();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +74,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-language black" aria-hidden="true"></i> fr</a>
+                        <a href="index.php"><i class="fa fa-language black" aria-hidden="true"></i> fr</a>
                     </li>
                 </ul>
             </div>
@@ -116,36 +122,33 @@
             </div>
             <section id="portfolio">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 portfolio-item parent">
-                            <a href="http://projects.obrassard.ca/textcrypteronline" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/textcrypterjs.png" class="img-responsive mobile-margin bw bordered" alt="website tumbnail">
-                            </a>
-                            <div title="Website is available, link is active"><div class="status hidden-xs"><span class="active">&#9679;</span>  Active</div></div>
-                            <p class="description">
-                                Little web app to encrypt and decrypt short messages.
-                            </p>
-                        </div>
-                        <div class="col-sm-4 portfolio-item">
-                            <a href="http://projects.obrassard.ca/bashcalculator" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/bashcalc.png" class="img-responsive mobile-margin bw bordered" alt="website tumbnail">
-                            </a>
-                            <div title="Website is available, link is active"><div class="status hidden-xs"><span class="active">&#9679;</span>  Active</div></div>
-                            <p class="description">
-                                Calculate basic math operations right from your bash terminal.
-                            </p>
+                    <?php
+                    $cpt = 0;
 
-                        </div>
+                    foreach ( $projects as $oneproject ) {
+                        if($cpt == 0) { echo "<div class='row'>";} ?>
+
                         <div class="col-sm-4 portfolio-item">
-                            <a href="http://github.com/obrassard/exbot" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/exbot.png" class="img-responsive mobile-margin bw bordered" alt="website tumbnail">
+                            <a href="<?php echo $oneproject['Url'] ?>" class="portfolio-link" data-toggle="modal">
+                                <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="image du projet">
                             </a>
-                            <div title="Link Active"><div class="status hidden-xs"><span class="active">&#9679;</span>  Active</div></div>
                             <p class="description">
-                                Exbot : An extension of Java Robot API
+                                <?php echo $oneproject['Description'] ?>
                             </p>
                         </div>
-                    </div>
+
+                        <?php
+                        $cpt++;
+                        if($cpt == 3){
+                            echo "</div>";
+                            $cpt = 0;
+                        }
+                    }
+                    if ($cpt != 0) {
+                        echo "</div>";
+                    }
+
+                    ?>
                 </div>
             </section>
         </div>
