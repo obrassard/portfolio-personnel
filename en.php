@@ -197,7 +197,6 @@ $projects = GetProjectsEn();
                     <li> <a href="mailto:contact@obrassard.me"><i class="fa fa-envelope"></i></a> </li>
                 </ul>
                 <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
-                <span class="hidden-xs"><a style="float: right; color: #333333; font-size: 8px; text-decoration: underline;" href="./simplified.html">Accces the simplified html page</a></span>
             </div>
             </div>
     </footer>

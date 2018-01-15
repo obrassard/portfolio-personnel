@@ -36,7 +36,7 @@ if (!isset($_SESSION['adminId'])){
                 </ul>
                 <ul class="navbar-nav my-2 my-lg-0 ">
                     <li class="nav-item ">
-                        <a class="nav-link" href="../index.php">Retourner au site principal</a>
+                        <a class="nav-link" href="http://obrassard.ca">Retourner au site principal</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="logout.php">Déconnexion</a>
