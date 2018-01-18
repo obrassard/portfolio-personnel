@@ -34,3 +34,10 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $(".navbar-collapse").collapse('hide');
 });
+
+//==================== Github Integration Animations ============================
+
+$('#seeAll').click(function(){
+    $('#github-projects').slideToggle(700, "easeInOutCubic");
+    $(this).children("i").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up")
+})

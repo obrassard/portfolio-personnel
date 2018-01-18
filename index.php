@@ -145,14 +145,22 @@ $projects = GetProjectsFr();
                     ?>
                 </div>
             </section>
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3 id="seeAll">Voir tous les projets <i class="fa fa-chevron-down"></i></h3>
+            </div>
         </div>
     </section>
 
     <section id="github-projects" class="content-section text-center">
+        
         <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2 style="margin-bottom: 25px"><i class="fa fa-github"></i></h2>
-
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 style="margin-bottom: 25px"><i class="fa fa-github"></i></h2>
+                </div>
+                <div class="col-md-8 col-md-offset-2" id="AllProjects">
+                    <!-- API content -->
+                </div>
             </div>
         </div>
 
@@ -197,7 +205,7 @@ $projects = GetProjectsFr();
                 <li><a href="http://github.com/obrassard"><i class="fa fa-github"></i></a> </li>
                 <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
                 <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
-                <li> <a href="mailto:contact@obrassard.me"><i class="fa fa-envelope"></i></a> </li>
+                <li> <a href="mailto:obrassard@intfinitlabs.ca"><i class="fa fa-envelope"></i></a> </li>
             </ul>
             <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
         </div>
@@ -206,6 +214,8 @@ $projects = GetProjectsFr();
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="js/api.github.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

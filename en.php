@@ -194,7 +194,7 @@ $projects = GetProjectsEn();
                     <li><a href="http://github.com/obrassard"><i class="fa fa-github"></i></a> </li>
                     <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
                     <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
-                    <li> <a href="mailto:contact@obrassard.me"><i class="fa fa-envelope"></i></a> </li>
+                    <li> <a href="mailto:obrassard@intfinitlabs.ca"><i class="fa fa-envelope"></i></a> </li>
                 </ul>
                 <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
             </div>
