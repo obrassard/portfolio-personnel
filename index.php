@@ -146,8 +146,7 @@ $projects = GetProjectsFr();
                 </div>
             </section>
             <div class="col-lg-8 col-lg-offset-2">
-                <h3 id="seeAll">Voir tous les projets <i class="fa fa-chevron-down"></i></h3>
-
+                <h3 id="seeAll">Afficher tous les projets <i class="fa fa-chevron-down"></i></h3>
             </div>
         </div>
     </section>
@@ -208,7 +207,7 @@ $projects = GetProjectsFr();
                 <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
                 <li> <a href="mailto:obrassard@intfinitlabs.ca"><i class="fa fa-envelope"></i></a> </li>
             </ul>
-            <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
+            <p id="copyright">&copy; Olivier Brassard - <?php echo date("Y"); ?></p><br>
         </div>
     </footer>
 

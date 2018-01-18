@@ -151,7 +151,25 @@ $projects = GetProjectsEn();
                     ?>
                 </div>
             </section>
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3 id="seeAll">Show all projects <i class="fa fa-chevron-down"></i></h3>
+            </div>
         </div>
+    </section>
+
+    <section id="github-projects" class="content-section text-center">
+        <i id="arrow"></i>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 style="margin-bottom: 25px"><i class="fa fa-github" style="font-size:40px"></i></h2>
+                </div>
+                <div class="col-md-8 col-md-offset-2" id="AllProjects">
+                    <!-- API content -->
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- Contact Section -->
@@ -196,7 +214,7 @@ $projects = GetProjectsEn();
                     <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
                     <li> <a href="mailto:obrassard@intfinitlabs.ca"><i class="fa fa-envelope"></i></a> </li>
                 </ul>
-                <p id="copyright">&copy; Olivier Brassard - 2017</p><br>
+                <p id="copyright">&copy; Olivier Brassard - <?php echo date("Y"); ?></p><br>
             </div>
             </div>
     </footer>
@@ -207,6 +225,8 @@ $projects = GetProjectsEn();
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/api.github.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/behavior.js"></script>

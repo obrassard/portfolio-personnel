@@ -459,12 +459,12 @@ body {
 
 #seeAll{
     font-size: 20px;
-    color: #530370;
+    /* color: #530370; */
+    color: #96082e;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
     -webkit-transition:.5s;
-
 }
 
 #seeAll:hover{
