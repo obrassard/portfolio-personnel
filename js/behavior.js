@@ -38,6 +38,15 @@ $('.navbar-collapse ul li a').click(function() {
 //==================== Github Integration Animations ============================
 
 $('#seeAll').click(function(){
-    $('#github-projects').slideToggle(700, "easeInOutCubic");
-    $(this).children("i").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up")
+    if($(this).children("i").hasClass("fa-chevron-down")){
+        $('#github-projects').slideDown(700, "easeInOutCubic", function(){
+            $('#arrow').fadeIn();
+        });
+    } else {
+        $('#arrow').fadeOut(function(){
+            $('#github-projects').slideUp(700, "easeInOutCubic");
+        });
+    }
+    $(this).children("i").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up");
+
 })

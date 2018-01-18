@@ -147,16 +147,17 @@ $projects = GetProjectsFr();
             </section>
             <div class="col-lg-8 col-lg-offset-2">
                 <h3 id="seeAll">Voir tous les projets <i class="fa fa-chevron-down"></i></h3>
+
             </div>
         </div>
     </section>
 
     <section id="github-projects" class="content-section text-center">
-        
+        <i id="arrow"></i>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2 style="margin-bottom: 25px"><i class="fa fa-github"></i></h2>
+                    <h2 style="margin-bottom: 25px"><i class="fa fa-github" style="font-size:40px"></i></h2>
                 </div>
                 <div class="col-md-8 col-md-offset-2" id="AllProjects">
                     <!-- API content -->

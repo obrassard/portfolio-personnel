@@ -457,6 +457,20 @@ body {
 
 /************ Github section  ****************/
 
+#seeAll{
+    font-size: 20px;
+    color: #530370;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+
+}
+
+#seeAll:hover{
+    color: white;
+}
+
 #github-projects{
     display: none;
     margin-top: 20px;
@@ -466,15 +480,18 @@ body {
     position: relative;
 }
 
-#github-projects::before{
+#arrow{
     content: '';
     width: 60px;
     height: 60px;
     background-color: #222;
-    transform: rotate(45deg);
+
     position: absolute;
-    left:47.5%;
     top:-10px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+
+    display: none;
 }
 
 .git{
@@ -516,12 +533,4 @@ body {
     font-size: 13px;
     color: color: #bbb;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-#seeAll{
-    font-size: 20px;
-}
-
-#seeAll:hover{
-    color: #ccc;
 }
