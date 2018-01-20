@@ -75,11 +75,13 @@ $projects = GetProjectsFr();
         </div>
         <!-- /.container -->
     </nav>
+
     <!-- Intro Header -->
     <header class="intro fullHeight" style="display: none">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
+
                     <div class="col-md-8 col-md-offset-2 fadein" style="display: none">
                         <h1 class="shadow-header">Bonjour</h1>
                         <a href="#about" class="btn btn-circle page-scroll">
@@ -189,11 +191,22 @@ $projects = GetProjectsFr();
                         <label for="message">Votre message</label>
                         <textarea class="form-control" id="message" name="message"></textarea>
                     </div>
-                    <input type="hidden" name="_next" value="http://obrassard.github.io/confirmation-fr.html" />
+                    <input type="hidden" name="_next" value="http://obrassard.ca/index.php?code=1#contactForm" />
                     <input type="hidden" name="_subject" value="New message from your website!" />
                 </form>
                 <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oups!</strong> Veuillez compléter tous les champs.</div>
                 <button class="btn btn-default pull-right" onclick="ValidateForm()">Envoyer</button>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <?php
+                if (isset($_GET['code'])){
+                    if ($_GET['code'] == 1) {
+                        echo '<br /><div class="alert alert-success" role="alert">
+                            Le message a été envoyé avec succès!
+                        </div>';
+                    }
+
+                } ?>
             </div>
         </div>
     </section>

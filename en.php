@@ -195,11 +195,22 @@ $projects = GetProjectsEn();
                         <label for="message">Your message</label>
                         <textarea class="form-control" id="message" name="message"></textarea>
                     </div>
-                    <input type="hidden" name="_next" value="http://obrassard.github.io/confirmation-en.html" />
+                    <input type="hidden" name="_next" value="http://obrassard.ca/en.php?code=1#contactForm" />
                     <input type="hidden" name="_subject" value="New message from your website!" />
                 </form>
                 <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oh snap!</strong> Please complete all fields.</div>
                 <button class="btn btn-default pull-right" onclick="ValidateForm()">Send</button>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <?php
+                if (isset($_GET['code'])){
+                    if ($_GET['code'] == 1) {
+                        echo '<br /><div class="alert alert-success" role="alert">
+                            Your message has been successfully sent!
+                        </div>';
+                    }
+
+                } ?>
             </div>
         </div>
     </section>
