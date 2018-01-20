@@ -50,6 +50,21 @@ if (!isset($_SESSION['adminId'])){
             <div class="row">
                 <div class="col-md-12"><h1>Administration</h1><hr></div>
                 <hr>
+                <div class="col-md-12">
+                    <?php
+                    if (isset($_GET['code'])){
+                        if ($_GET['code'] == 1) {
+                            echo '<div class="alert alert-success" role="alert">
+                                Le projet à été ajouté avec succèss!
+                            </div>';
+                        }
+                        else if ($_GET['code'] == 2) {
+                            echo "<div class='alert alert-danger' role='alert'>
+                                Une erreur s'est produite.
+                            </div>";
+                        }
+                    } ?>
+                </div>
                 <div class="col-md-12"><br /><h4>Ajouter un projet</h4></div>
                 <div class="col-md-12">
                     <form method="post" enctype="multipart/form-data" action="./projectUpload.php">
