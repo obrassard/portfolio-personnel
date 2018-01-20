@@ -10,6 +10,7 @@ if (!isset($_SESSION['adminId'])){
     die();
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +19,9 @@ if (!isset($_SESSION['adminId'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Admin Panel</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
 
@@ -42,7 +43,6 @@ if (!isset($_SESSION['adminId'])){
                         <a class="nav-link" href="logout.php">Déconnexion</a>
                     </li>
                 </ul>
-
             </div>
         </nav>
 
@@ -50,6 +50,36 @@ if (!isset($_SESSION['adminId'])){
             <div class="row">
                 <div class="col-md-12"><h1>Administration</h1><hr></div>
                 <hr>
+                <div class="col-md-12"><br /><h4>Ajouter un projet</h4></div>
+                <div class="col-md-12">
+                    <form method="post" enctype="multipart/form-data" action="./projectUpload.php">
+                      <div class="form-row">
+                        <div class="col-md">
+                          <textarea type="text" class="form-control" placeholder="Description Français" name="descfr" required></textarea>
+                        </div>
+                        <div class="col-md">
+                          <textarea type="text" class="form-control" placeholder="Description Anglais" name="descen" required></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md">
+                          <input type="text" class="form-control" placeholder="url vers site FR" name="urlfr" required>
+                        </div>
+                        <div class="col-md">
+                          <input type="text" class="form-control" placeholder="url vers site EN" name="urlen" required>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-3">
+                          <input type="text" class="form-control" placeholder="Nom du fichier" name="name" required>
+                        </div>
+                        <div class="col-md">
+                          <input type="file" class="form-control" name="thumbnail" required>
+                        </div>
+                      </div>
+                      <input type="submit" value="Ajouter le projet" class="btn btn-primary btn-block" />
+                    </form>
+                </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -57,5 +87,3 @@ if (!isset($_SESSION['adminId'])){
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     </body>
 </html>
-
-

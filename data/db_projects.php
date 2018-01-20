@@ -34,6 +34,36 @@ function GetProjectsEn(){
     }
 }
 
+function AddProjectFr($desc, $url, $image){
+    $bdd = db_connect();
+    try{
+        $request = $bdd -> prepare("INSERT INTO project_fr(Description, Image, Url) VALUES (:descr, :image, :url)");
+        $request -> execute(array(
+            "descr"=>$desc,
+            "image"=>$image,
+            "url"=>$url
+        ));
+        $request -> closeCursor();
+
+    }catch (Exception $e){
+        die($e->getMessage());
+    }
+}
+function AddProjectEn($desc, $url, $image){
+    $bdd = db_connect();
+    try{
+        $request = $bdd -> prepare("INSERT INTO project_en(Description, Image, Url) VALUES (:descr, :image, :url)");
+        $request -> execute(array(
+            "descr"=>$desc,
+            "image"=>$image,
+            "url"=>$url
+        ));
+        $request -> closeCursor();
+
+    }catch (Exception $e){
+        die($e->getMessage());
+    }
+}
 
 
 
