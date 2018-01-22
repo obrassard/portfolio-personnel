@@ -18,10 +18,10 @@
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
-    "jquery": "^1.11.3"
+    "jquery": "^3.3.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
+    "url": "https://github.com/obrassard/portfolio-personnel"
   }
 }
