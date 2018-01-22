@@ -1,6 +1,8 @@
 
 //Fadein animation of the header
 $(document).ready(function () {
+    $('.active').removeClass('active')
+    $('.hidden').addClass('active')
     $('header.intro').fadeIn(2000, function(){
         $('div.fadein').fadeIn(2000);
     });
