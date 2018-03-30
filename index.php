@@ -102,7 +102,7 @@ $projects = GetProjectsFr();
                     <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="./img/me.png" width="200" alt="Photo de moi"></a>
 
                     <p id="no-margin">Hello world ! Je suis un étudiant canadien en informatique et ceci est le portfolio de mes projets personnels.
-                        J'apprécie vraiment la programmation, j'apprends donc plusieurs langages, entre autre C#, Swift, Java, HTML, CSS et JS.
+                        J'apprécie vraiment la programmation, j'apprends donc plusieurs langages, entre autre C#, Swift, Java, SQL, HTML, CSS et JS.
                         Les projets ci-dessous - et ce site lui-même - sont des «expériences de codage» que j'ai décidé de partager avec tous ceux qui, comme moi, ont une passion pour la prog !
                     </p>
                 </div>
@@ -148,7 +148,7 @@ $projects = GetProjectsFr();
                 </div>
             </section>
             <div class="col-lg-8 col-lg-offset-2">
-                <h3 id="seeAll">Afficher tous les projets <i class="fa fa-chevron-down"></i></h3>
+                <button id="seeAll" class="btn btn-lg btn-primary">Afficher tous les projets <i class="fa fa-chevron-down"></i></button>
             </div>
         </div>
     </section>
@@ -169,6 +169,7 @@ $projects = GetProjectsFr();
     </section>
 
     <!-- Contact Section -->
+    <div class="pattern-background">
     <section id="contact" class="lessPadding container content-section ">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -178,7 +179,7 @@ $projects = GetProjectsFr();
 
             </div>
             <div class="col-md-6 col-md-offset-3" >
-                <form id="contactForm" action="https://formspree.io/brassard.oli@gmail.com" method="POST">
+                <form id="contactForm" action="https://formspree.io/hey@obrassard.ca" method="POST">
                     <div class="form-group">
                         <label for="name">Nom</label>
                         <input type="text" class="form-control" id="name" name="name">
@@ -212,17 +213,19 @@ $projects = GetProjectsFr();
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
         <div class="container text-center">
             <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
                 <li><a href="http://github.com/obrassard"><i class="fa fa-github"></i></a> </li>
                 <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
                 <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
-                <li> <a href="mailto:obrassard@intfinitlabs.ca"><i class="fa fa-envelope"></i></a> </li>
+                <li> <a href="mailto:hey@obrassard.ca"><i class="fa fa-envelope"></i></a> </li>
             </ul>
             <p id="copyright">&copy; Olivier Brassard - <?php echo date("Y"); ?></p><br>
         </div>
     </footer>
+    </div>
+
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>

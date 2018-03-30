@@ -457,18 +457,26 @@ body {
 
 /************ Github section  ****************/
 
-#seeAll{
-    font-size: 20px;
-    /* color: #530370; */
-    color: #a3032e;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
+
+#seeAll {
+    background-color: #940722;
+    border: none;
+    box-shadow: 0 3px 0 0 #670422;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
+#seeAll:active {
+    background: #bd0024;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+
 #seeAll:hover{
-    color: white;
+    background-color: #bd0024;
 }
 
 #github-projects{
@@ -531,6 +539,22 @@ body {
 .git table td {
     padding-right: 20px;
     font-size: 13px;
-    color: color: #bbb;
+    color: #bbb;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+/*=========== Contact/Footer =============*/
+.pattern-background{
+
+    width: 100%;
+    padding: 60px 0;
+    margin-top: 30px;
+    background: url(../img/pattern-bg.png);
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
