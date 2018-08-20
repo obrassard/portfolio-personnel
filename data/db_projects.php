@@ -10,7 +10,7 @@ require_once "db_connection.php";
 function GetProjectsFr(){
     $bdd = db_connect();
     try{
-        $request = $bdd -> query("SELECT * FROM project_fr");
+        $request = $bdd -> query("SELECT * FROM project_fr order by Id desc");
         if($request){
             return $request -> fetchAll();
         }
@@ -23,7 +23,7 @@ function GetProjectsFr(){
 function GetProjectsEn(){
     $bdd = db_connect();
     try{
-        $request = $bdd -> query("SELECT * FROM project_en");
+        $request = $bdd -> query("SELECT * FROM project_en order by Id desc");
         if($request){
             return $request -> fetchAll();
         }

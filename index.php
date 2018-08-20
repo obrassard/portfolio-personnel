@@ -114,7 +114,7 @@ $projects = GetProjectsFr();
     <section id="project" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2 class="projets">Projets</h2>
+                <h2 class="projets">Mes projets</h2>
             </div>
             <section id="portfolio">
                 <div class="container">
@@ -203,7 +203,7 @@ $projects = GetProjectsFr();
                 if (isset($_GET['code'])){
                     if ($_GET['code'] == 1) {
                         echo '<br /><div class="alert alert-success" role="alert">
-                            Le message a été envoyé avec succès!
+                            Votre message a été envoyé avec succès!
                         </div>';
                     }
 

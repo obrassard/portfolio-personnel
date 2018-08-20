@@ -118,7 +118,7 @@ $projects = GetProjectsEn();
     <section id="project" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2 class="projets">Projects</h2>
+                <h2 class="projets">My Projects</h2>
             </div>
             <section id="portfolio">
                 <div class="container">
