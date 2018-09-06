@@ -1,7 +1,9 @@
 <?php
 require_once "data/db_projects.php";
+require_once "data/db_technologies.php";
 
 $projects = GetProjectsFr();
+$technologies = GetTechnologies();
 
 ?>
 <!DOCTYPE html>
@@ -106,6 +108,29 @@ $projects = GetProjectsFr();
                         Les projets ci-dessous - et ce site lui-même - sont des «expériences de codage» que j'ai décidé de partager avec tous ceux qui, comme moi, ont une passion pour la prog !
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="container content-section text-center">
+        <div class="row">
+             <div class="col-lg-8 col-lg-offset-2">
+                <h3>Langages et technologies avec lesquels j'ai travaillé</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <?php foreach ( $technologies as $techno ) { ?>
+                    <div class="col-md-2 col-sm-3 col-xs-4">
+                        <a href="<?php echo $techno['url'] ?>" target="_blank">
+                            <div class="card-body well well-dark tech">
+                                <img src="img/technologies/<?php echo $techno['image'] ?>" width="150px" alt="<?php echo $techno['name'] ?>"/>
+                                <p class="tech-txt"><?php echo $techno['name'] ?></p>
+                            </div>
+                        </a>
+                    </div>
+                <? } ?>
             </div>
         </div>
     </section>

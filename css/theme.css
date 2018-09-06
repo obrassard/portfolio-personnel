@@ -554,4 +554,53 @@ body {
     -o-background-size: cover;
 }
 
+/*===== well-dark =====*/
 
+.well.well-dark {
+  background-color: #111;
+  border: 1px solid black;
+}
+.well img {
+  max-width: 100%;
+}
+
+
+@media (min-width: 767px) {
+  #techonologies.content-section {
+    padding-top: 80px;
+  }
+}
+
+/*====  Technologies ======*/
+
+.tech img, .tech .tech-txt{
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.tech:hover img{
+  filter: grayscale(100%) brightness(20%);
+  -webkit-filter: grayscale(100%) brightness(20%);
+}
+
+.tech:hover .tech-txt{
+  opacity: 1;
+}
+
+.tech-txt {
+  color: white !important;
+  text-shadow: black 2px 2px 4px;
+  font-weight: bold;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.tech-txt, .tech{
+  box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
