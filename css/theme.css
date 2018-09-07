@@ -144,7 +144,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/lights.jpg);
+  background: url(../img/pattern.svg);
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -157,6 +157,11 @@ a:focus {
   letter-spacing: .05em;
   text-transform: uppercase;
   font-weight: 500;
+
+  background: black;
+  box-shadow: 0 0 20px 20px black;
+  width: fit-content;
+  margin: auto;
 }
 
 /*Mobile*/
