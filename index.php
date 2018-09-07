@@ -104,7 +104,7 @@ $technologies = GetTechnologies();
                     <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="./img/me.png" width="200" alt="Photo de moi"></a>
 
                     <p id="no-margin">Hello world ! Je suis un étudiant canadien en informatique et ceci est le portfolio de mes projets personnels.
-                        J'apprécie vraiment la programmation, j'apprends donc plusieurs langages, entre autre C#, Swift, Java, SQL, HTML, CSS et JS.
+                        J'apprécie vraiment la programmation, j'apprends donc plusieurs langages, entre autre C#, Swift, Java, Android, Angular, TS, SQL, HTML, CSS et JS.
                         Les projets ci-dessous - et ce site lui-même - sont des «expériences de codage» que j'ai décidé de partager avec tous ceux qui, comme moi, ont une passion pour la prog !
                     </p>
                 </div>

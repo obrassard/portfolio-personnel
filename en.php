@@ -1,7 +1,9 @@
 <?php
 require_once "data/db_projects.php";
+require_once "data/db_technologies.php";
 
 $projects = GetProjectsEn();
+$technologies = GetTechnologies();
 
 ?>
 <!DOCTYPE html>
@@ -106,13 +108,35 @@ $projects = GetProjectsEn();
                     <h2 style="margin-bottom: 25px">About me</h2>
                     <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="./img/me.png" width="200" alt="Photo de moi"></a>
                     <p id="no-margin">Hello world ! I'm a Canadian student in computer science and this is the portfolio of my personnal projects.
-                        I really enjoy programming, therefore I am learning several languages including C#, Swift, Java, SQL, HTML, CSS, and JS.
+                        I really enjoy programming, therefore I am learning several languages including C#, Swift, Java, Android, Angular, TS, SQL, HTML, CSS, and JS.
                         The projects below - and this site itself - are "code experiments" that I decided to share with everyone who, like me, have a passion for coding !</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Technologies Section -->
+    <section id="technologies" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Technologies and languages I worked with</h2>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <?php foreach ( $technologies as $techno ) { ?>
+                        <div class="col-md-2 col-sm-3 col-xs-4">
+                            <a href="<?php echo $techno['url'] ?>" target="_blank">
+                                <div class="card-body well well-dark tech">
+                                    <img src="img/technologies/<?php echo $techno['image'] ?>" width="150px" alt="<?php echo $techno['name'] ?>"/>
+                                    <p class="tech-txt"><?php echo $techno['name'] ?></p>
+                                </div>
+                            </a>
+                        </div>
+                    <? } ?>
+                </div>
+            </div>
+        </section>
 
     <!-- Projects Section -->
     <section id="project" class="container content-section text-center">
