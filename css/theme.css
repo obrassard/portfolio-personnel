@@ -1,6 +1,6 @@
 
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto|Roboto+Mono|Source+Code+Pro');
 
 
 body {
@@ -157,11 +157,14 @@ a:focus {
   letter-spacing: .05em;
   text-transform: uppercase;
   font-weight: 500;
-
   background: black;
   box-shadow: 0 0 20px 20px black;
   width: fit-content;
   margin: auto;
+}
+
+.code{
+  font-family: 'Source Code Pro', 'Consolas', 'Roboto Mono', 'Menlo', 'Monaco',monospace;
 }
 
 /*Mobile*/
@@ -609,3 +612,29 @@ body {
 .tech-txt, .tech{
   box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2); 
 }
+
+
+/* ========  Blink cursor ========= */
+.blink_text {
+  animation:1s blinker linear infinite;
+  -webkit-animation:1s blinker linear infinite;
+  -moz-animation:1s blinker linear infinite;
+}
+
+@-moz-keyframes blinker {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+  }
+
+@-webkit-keyframes blinker {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+  }
+
+@keyframes blinker {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+  }
