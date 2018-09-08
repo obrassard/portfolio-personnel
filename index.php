@@ -2,7 +2,16 @@
 require_once "data/db_projects.php";
 require_once "data/db_technologies.php";
 
-$projects = GetProjectsFr();
+$lang_json = json_decode(file_get_contents('./lang.json')); 
+
+if (isset($_GET['lang']) && $_GET['lang']=="en"){
+    $projects = GetProjectsEn();
+    $r = $lang_json->en;
+} else {
+    $projects = GetProjectsFr();
+    $r = $lang_json->fr;
+}
+
 $technologies = GetTechnologies();
 
 ?>
@@ -60,16 +69,16 @@ $technologies = GetTechnologies();
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">À Propos</a>
+                        <a class="page-scroll" href="#about"><?php echo $r->about ?></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#project">Projets</a>
+                        <a class="page-scroll" href="#project"><?php echo $r->projects ?></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact"><?php echo $r->contact ?></a>
                     </li>
                     <li>
-                        <a href="en.php"><i class="fa fa-language black" aria-hidden="true"></i> en</a>
+                        <a href="<?php echo $r->lang_redirect ?>"><i class="fa fa-language black" aria-hidden="true"></i> <?php echo $r->lang ?></a>
                     </li>
                 </ul>
             </div>
@@ -85,7 +94,7 @@ $technologies = GetTechnologies();
                 <div class="row">
 
                     <div class="col-md-8 col-md-offset-2 fadein" style="display: none">
-                        <h1 class="shadow-header">Bonjour</h1>
+                        <h1 class="shadow-header"><span class="code">&gt;</span><?php echo $r->hello ?><span class="blink_text code">_</span></h1>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -100,13 +109,9 @@ $technologies = GetTechnologies();
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2 style="margin-bottom: 25px">À propos</h2>
-                    <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="./img/me.png" width="200" alt="Photo de moi"></a>
-
-                    <p id="no-margin">Hello world ! Je suis un étudiant canadien en informatique et ceci est le portfolio de mes projets personnels.
-                        J'apprécie vraiment la programmation, j'apprends donc plusieurs langages, entre autre C#, Swift, Java, Android, Angular, TS, SQL, HTML, CSS et JS.
-                        Les projets ci-dessous - et ce site lui-même - sont des «expériences de codage» que j'ai décidé de partager avec tous ceux qui, comme moi, ont une passion pour la prog !
-                    </p>
+                    <h2 style="margin-bottom: 25px"><?php echo $r->about ?></h2>
+                    <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="https://github.com/obrassard.png" width="200" alt="<?php echo $r->pofme ?>"></a>
+                    <p id="no-margin"><?php echo $r->welcome_message ?></p>
                 </div>
             </div>
         </div>
@@ -116,7 +121,7 @@ $technologies = GetTechnologies();
     <section id="technologies" class="container content-section text-center">
         <div class="row">
              <div class="col-lg-8 col-lg-offset-2">
-                <h3>Langages et technologies avec lesquels j'ai travaillé</h2>
+                <h3><?php echo $r->tech_header ?></h3>
             </div>
         </div>
         <div class="col-md-12">
@@ -139,7 +144,7 @@ $technologies = GetTechnologies();
     <section id="project" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2 class="projets">Mes projets</h2>
+                <h2 class="projets"><?php echo $r->myprojects ?></h2>
             </div>
             <section id="portfolio">
                 <div class="container">
@@ -151,7 +156,7 @@ $technologies = GetTechnologies();
 
                         <div class="col-sm-4 portfolio-item">
                             <a href="<?php echo $oneproject['Url'] ?>" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="image du projet">
+                                <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
                             </a>
                             <p class="description">
                                 <?php echo $oneproject['Description'] ?>
@@ -173,7 +178,7 @@ $technologies = GetTechnologies();
                 </div>
             </section>
             <div class="col-lg-8 col-lg-offset-2">
-                <button id="seeAll" class="btn btn-lg btn-primary">Afficher tous les projets <i class="fa fa-chevron-down"></i></button>
+                <button id="seeAll" class="btn btn-lg btn-primary"><?php echo $r->showallprojects ?> <i class="fa fa-chevron-down"></i></button>
             </div>
         </div>
     </section>
@@ -199,37 +204,36 @@ $technologies = GetTechnologies();
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
 
-                <h2>Contactez-moi</h2>
-                <p>Vous voulez me donner votre opinion, me suggérer des idées de projet ou simplement me dire bonjour ? Eh bien, contactez-moi !</p>
+                <h2><?php echo $r->contactme ?></h2>
+                <p><?php echo $r->contactmedetail ?></p>
 
             </div>
             <div class="col-md-6 col-md-offset-3" >
                 <form id="contactForm" action="https://formspree.io/hey@obrassard.ca" method="POST">
                     <div class="form-group">
-                        <label for="name">Nom</label>
+                        <label for="name"><?php echo $r->frmname ?></label>
                         <input type="text" class="form-control" id="name" name="name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Adresse Email</label>
+                        <label for="email"><?php echo $r->frmemail ?></label>
                         <input type="email" class="form-control" id="email" name="_replyto">
                     </div>
                     <div class="form-group">
-                        <label for="message">Votre message</label>
+                        <label for="message"><?php echo $r->frmmessage ?></label>
                         <textarea class="form-control" id="message" name="message"></textarea>
                     </div>
                     <input type="hidden" name="_next" value="http://obrassard.ca/index.php?code=1#contactForm" />
                     <input type="hidden" name="_subject" value="New message from your website!" />
                 </form>
-                <div class="alert alert-danger" id="alert" style="display: none" role="alert"> <strong>Oups!</strong> Veuillez compléter tous les champs.</div>
-                <button class="btn btn-default pull-right" onclick="ValidateForm()">Envoyer</button>
+                <div class="alert alert-danger" id="alert" style="display: none" role="alert" ><?php echo $r->frmerror ?></div>
+                <button class="btn btn-default pull-right" onclick="ValidateForm()"><?php echo $r->send ?></button>
             </div>
             <div class="col-md-6 col-md-offset-3">
                 <?php
                 if (isset($_GET['code'])){
                     if ($_GET['code'] == 1) {
-                        echo '<br /><div class="alert alert-success" role="alert">
-                            Votre message a été envoyé avec succès!
-                        </div>';
+                        echo '<br /><div class="alert alert-success" role="alert">'.
+                        $r->sendconf.'</div>';
                     }
 
                 } ?>
@@ -264,6 +268,16 @@ $technologies = GetTechnologies();
     <!-- Theme JavaScript -->
     <script src="js/behavior.js"></script>
     <script src="./js/contactform.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-104984331-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 
 </html>
