@@ -165,7 +165,9 @@ $technologies = GetTechnologies();
 
                         <div class="col-sm-4 portfolio-item">
                             <a href="<?php echo $oneproject['Url'] ?>" class="portfolio-link" data-toggle="modal">
-                                <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
+                                <div class="bgimg">
+                                    <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
+                                </div>
                             </a>
                             <p class="description">
                                 <?php echo $oneproject['Description'] ?>

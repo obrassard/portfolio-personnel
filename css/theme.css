@@ -418,16 +418,29 @@ body {
 }
 
 /*B&W*/
-.bw {
+.bw, .bgimg{
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-.bw:hover {
+.bgimg:hover .bw {
+  filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+  opacity: 0.5;
 }
+
+
+.bgimg{
+  border-radius: 3px;
+  background: rgba(0,0,0,0);
+}
+
+.bgimg:hover{
+  background: rgba(0, 183, 255, 1);
+}
+
 
 .parent .popup {
   display: none;
