@@ -63,8 +63,8 @@ a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Raleway","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #1f0035;
-  border-bottom: 1px solid #430035;
+  background: #157ffb;
+  border-bottom: 1px solid #20bcfc;
   font-weight: 600;
 }
 .navbar-nav{
@@ -108,7 +108,7 @@ a:focus {
   outline: none;
 }
 .navbar-custom .nav li.active a {
-  background-color: #430035
+  background-color: #20bcfc
 }
 .navbar-custom .nav li.active a:hover {
   color: white;
@@ -125,8 +125,8 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: #1f0035;
-    border-bottom: 1px solid #430035
+    background: #157ffb;
+    border-bottom: 1px solid #20bcfc
   }
 }
 #copyright{
