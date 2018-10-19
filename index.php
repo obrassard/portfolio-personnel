@@ -103,7 +103,7 @@ $technologies = GetTechnologies();
                 <div class="row">
 
                     <div class="col-md-8 col-md-offset-2 fadein" style="display: none">
-                        <h1 class="shadow-header"><span class="code">&gt;</span><?php echo $r->hello ?><span class="blink_text code">_</span></h1>
+                        <h1 class="shadow-header"><span class="code">&gt;</span><?php echo $r->hello ?>!<span class="blink_text code">_</span></h1>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
