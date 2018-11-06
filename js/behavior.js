@@ -52,3 +52,25 @@ $('#seeAll').click(function(){
     $(this).children("i").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up");
 
 })
+
+//==================== Projects details SWAL ============================
+
+$('div.portfolio-item').click(function(){
+    let $title = $(this).find(".project-detail .title").text();
+    let $details = $(this).find(".project-detail .details").text();
+    let $url = $(this).attr("data-url");
+    let $btnText = $("#swal-btn-text").html();
+
+    swal({
+        title: $title,
+        text: $details,
+        showConfirmButton: ($url !== ""),
+        confirmButtonText: $btnText,
+        confirmButtonClass : 'btn swal-styled-btn',
+        showCloseButton: true
+    }).then((result) => {
+        if (result.value) {
+            window.open($url, '_blank');
+        }
+      })
+});

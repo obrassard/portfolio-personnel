@@ -10,7 +10,7 @@ require_once "db_connection.php";
 function GetProjectsFr(){
     $bdd = db_connect();
     try{
-        $request = $bdd -> query("SELECT * FROM project_fr order by Id desc");
+        $request = $bdd -> query("SELECT Title, `CaptionFR` as 'Caption',`DescriptionFR` as 'Description',`Image`,`Url` FROM `projects` order by Id desc");
         if($request){
             return $request -> fetchAll();
         }
@@ -23,7 +23,7 @@ function GetProjectsFr(){
 function GetProjectsEn(){
     $bdd = db_connect();
     try{
-        $request = $bdd -> query("SELECT * FROM project_en order by Id desc");
+        $request = $bdd -> query("SELECT Title, `CaptionEN` as 'Caption', `DescriptionEN` as 'Description',`Image`,`Url` FROM `projects` order by Id desc");
         if($request){
             return $request -> fetchAll();
         }
@@ -34,12 +34,17 @@ function GetProjectsEn(){
     }
 }
 
-function AddProjectFr($desc, $url, $image){
+function AddProject($title, $capfr, $capen, $descfr, $descen, $url, $image){
     $bdd = db_connect();
     try{
-        $request = $bdd -> prepare("INSERT INTO project_fr(Description, Image, Url) VALUES (:descr, :image, :url)");
+        $request = $bdd -> prepare("INSERT INTO `projects`(Title, `CaptionFR`, `CaptionEN`, `DescriptionFR`, `DescriptionEN`, `Image`, `Url`) 
+                                    VALUES  (:title, :captionfr, :captionen, :descfr, :descen :image, :url)");
         $request -> execute(array(
-            "descr"=>$desc,
+            "title"=>$title,
+            "captionfr"=>$capfr,
+            "captionen"=>$capen,
+            "descfr"=>$descfr,
+            "descen"=>$descen,
             "image"=>$image,
             "url"=>$url
         ));
@@ -49,22 +54,5 @@ function AddProjectFr($desc, $url, $image){
         die($e->getMessage());
     }
 }
-function AddProjectEn($desc, $url, $image){
-    $bdd = db_connect();
-    try{
-        $request = $bdd -> prepare("INSERT INTO project_en(Description, Image, Url) VALUES (:descr, :image, :url)");
-        $request -> execute(array(
-            "descr"=>$desc,
-            "image"=>$image,
-            "url"=>$url
-        ));
-        $request -> closeCursor();
-
-    }catch (Exception $e){
-        die($e->getMessage());
-    }
-}
-
-
 
 ?>

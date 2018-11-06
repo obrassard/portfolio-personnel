@@ -19,7 +19,8 @@
         "sendconf":"Votre message a été envoyé avec succès!",
         "myprojects":"Mes projets",
         "altproject":"image du projet",
-        "showallprojects":"Afficher tous les projets"
+        "showallprojects":"Afficher tous les projets",
+        "swalbtntext":"Visiter le site web de ce projet"
     }, 
     "en" : {
         "about":"About me",
@@ -41,6 +42,7 @@
         "sendconf":"Your message has been successfully sent!",
         "myprojects":"My Projects",
         "altproject":"project image",
-        "showallprojects":"Show all projects"
+        "showallprojects":"Show all projects",
+        "swalbtntext":"Check this project's webiste"
     }
 }

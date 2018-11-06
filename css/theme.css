@@ -403,7 +403,7 @@ body {
 {
   margin-top:5px;
   font-size: 17px;
-  font-family: "Raleway", 'Roboto', arial, sans-serif;
+  font-family: "Raleway", 'Source Code Pro', arial, sans-serif;
   margin-bottom: 12px;
 }
 
@@ -568,6 +568,7 @@ body {
     padding: 60px 0;
     margin-top: 30px;
     background: url(../img/pattern-bg.png);
+    
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -651,3 +652,30 @@ body {
   50% { opacity: 0.0; }
   100% { opacity: 1.0; }
   }
+
+
+/*========= SWAL  =========*/
+.swal2-popup {
+  background: #0f0f0f !important;
+  color: white !important;
+  font-size: 1.6rem !important;
+}
+.swal2-popup .swal2-title {
+  color: white !important;
+  font-family: 'Raleway' !important;
+  letter-spacing: 0 !important;
+}
+
+.swal2-popup .swal2-content{
+  color : #dadada !important;
+}
+
+.swal-styled-btn{
+  background-color: #0076fd !important; 
+  border: none !important;
+  box-shadow: 0 3px 0 0 #013877 !important;
+  margin-bottom: 20px !important;
+}
+
+
+

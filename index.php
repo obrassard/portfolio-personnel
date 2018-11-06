@@ -43,9 +43,11 @@ $technologies = GetTechnologies();
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
     <link href="css/fa-colored.css" rel="stylesheet" type="text/css">
+
+    <!-- Swal-->
+    <link href="vendor/swal2/sweetalert2.min.css" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
     <link href="css/theme.css" rel="stylesheet">
@@ -163,15 +165,17 @@ $technologies = GetTechnologies();
                     foreach ( $projects as $oneproject ) {
                         if($cpt == 0) { echo "<div class='row'>";} ?>
 
-                        <div class="col-sm-4 portfolio-item">
-                            <a href="<?php echo $oneproject['Url'] ?>" class="portfolio-link" data-toggle="modal">
-                                <div class="bgimg">
-                                    <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
-                                </div>
-                            </a>
+                        <div class="col-sm-4 portfolio-item" data-url="<?php echo $oneproject['Url'] ?>">
+                            <div class="bgimg">
+                                <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
+                            </div>
                             <p class="description">
-                                <?php echo $oneproject['Description'] ?>
+                                <?php echo $oneproject['Caption'] ?>
                             </p>
+                            <div class="project-detail hidden">
+                                <div class="title"><?php echo $oneproject['Title'] ?></div>
+                                <div class="details"><?php echo $oneproject['Description'] ?></div>
+                            </div>
                         </div>
 
                         <?php
@@ -266,12 +270,15 @@ $technologies = GetTechnologies();
     </footer>
     </div>
 
+    <template id="swal-btn-text">
+        <?php echo $r->swalbtntext?>
+    </template>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
     <script src="js/api.github.js"></script>
+    <script src="vendor/swal2/sweetalert2.all.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
