@@ -20,7 +20,7 @@
         "myprojects":"Mes projets",
         "altproject":"image du projet",
         "showallprojects":"Afficher tous les projets",
-        "swalbtntext":"Visiter le site web de ce projet"
+        "swalbtntext":"En savoir plus !"
     }, 
     "en" : {
         "about":"About me",
@@ -43,6 +43,6 @@
         "myprojects":"My Projects",
         "altproject":"project image",
         "showallprojects":"Show all projects",
-        "swalbtntext":"Check this project's webiste"
+        "swalbtntext":"Tell me more !"
     }
 }

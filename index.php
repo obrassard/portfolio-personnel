@@ -47,7 +47,7 @@ $technologies = GetTechnologies();
     <link href="css/fa-colored.css" rel="stylesheet" type="text/css">
 
     <!-- Swal-->
-    <link href="vendor/swal2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="vendor/swal2/sweetalert2.min.css" rel="stylesheet" type="text/css"> -->
 
     <!-- Theme CSS -->
     <link href="css/theme.css" rel="stylesheet">
@@ -99,12 +99,12 @@ $technologies = GetTechnologies();
     </nav>
 
     <!-- Intro Header -->
-    <header class="intro fullHeight" style="display: none">
+    <header class="intro fullHeight">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-md-8 col-md-offset-2 fadein" style="display: none">
+                    <div class="col-md-8 col-md-offset-2" id="intro-title" style="display: none">
                         <h1 class="shadow-header"><span class="code">&gt;</span><?php echo $r->hello ?>!<span class="blink_text code">_</span></h1>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -278,14 +278,16 @@ $technologies = GetTechnologies();
     <script src="vendor/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/api.github.js"></script>
-    <script src="vendor/swal2/sweetalert2.all.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="vendor/swal2/sweetalert2.all.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/behavior.js"></script>
     <script src="./js/contactform.js"></script>
+ 
 </body>
 
 </html>

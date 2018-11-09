@@ -3,9 +3,10 @@
 $(document).ready(function () {
     $('.active').removeClass('active')
     $('.hidden').addClass('active')
-    $('header.intro').fadeIn(2000, function(){
-        $('div.fadein').fadeIn(2000);
-    });
+    $('#intro-title').delay(800).fadeIn(3000);
+    // $('header.intro').fadeIn(2000, function(){
+    //     
+    // });
 });
 
 
@@ -21,7 +22,7 @@ function collapseNavbar() {
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
+//jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);

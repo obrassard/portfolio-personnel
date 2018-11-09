@@ -441,14 +441,6 @@ body {
   background: rgba(0, 183, 255, 1);
 }
 
-
-.parent .popup {
-  display: none;
-}
-
-.parent:hover .popup {
-  display: block;
-}
 .description{
     margin-top: 5px;
     font-size: 17px;
@@ -676,6 +668,5 @@ body {
   box-shadow: 0 3px 0 0 #013877 !important;
   margin-bottom: 20px !important;
 }
-
 
 
