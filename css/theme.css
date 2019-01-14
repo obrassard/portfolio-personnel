@@ -244,9 +244,9 @@ a:focus {
   .shadow-header{
 
     text-shadow:
-            4px 4px 0px darkgrey,
-            7px 7px 0px rgba(255, 255, 255, 0.2);
-    font-size: 100%;
+            3px 3px 0px darkgrey,
+            6px 6px 0px rgba(255, 255, 255, 0.2);
+    font-size: 80%;
   }
 
 

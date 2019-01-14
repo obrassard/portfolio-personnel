@@ -3,10 +3,16 @@
 $(document).ready(function () {
     $('.active').removeClass('active')
     $('.hidden').addClass('active')
-    $('#intro-title').delay(800).fadeIn(3000);
-    // $('header.intro').fadeIn(2000, function(){
-    //     
-    // });
+
+    //Intro
+    //$('#intro-title').delay(800).fadeIn(3000);
+    new TypeIt('#intro-typed', {
+		loop: false,
+		breakLines: false,
+        waitUntilVisible: false,
+        speed: 80,
+        cursorChar: '_'
+	  }).go();
 });
 
 

@@ -104,8 +104,8 @@ $technologies = GetTechnologies();
         <div id="particles_effect" class="particles-effect"></div>  
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2" id="intro-title" style="display: none">
-                        <h1 class="shadow-header"><span class="code">&gt;</span><?php echo $r->hello ?>!<span class="blink_text code">_</span></h1>
+                    <div class="col-md-8 col-md-offset-2" id="intro-title">
+                        <h1 class="shadow-header"><span class="code">&gt;</span><span id="intro-typed"><?php echo $r->hello ?>!</span><!-- <span class="blink_text code">_</span>--></h1>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -284,6 +284,9 @@ $technologies = GetTechnologies();
     
     <!-- Swal2 -->
     <script src="vendor/swal2/sweetalert2.all.js"></script>
+
+    <!-- TypeIt -->
+    <script src="./js/typeit/typeit.min.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/behavior.js"></script>
