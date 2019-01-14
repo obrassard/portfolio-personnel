@@ -220,8 +220,8 @@ a:focus {
 @media (max-width: 375px) {
   .shadow-header{
     text-shadow:
-            2px 2px 0px darkgrey,
-            4px 4px 0px rgba(255, 255, 255, 0.2);
+            1px 1px 0px darkgrey,
+            2px 2px 0px rgba(255, 255, 255, 0.2);
     font-size: 90%;
   }
 }
