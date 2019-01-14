@@ -226,6 +226,18 @@ a:focus {
   }
 }
 
+.intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.intro .intro-body {
+  font-size: 40px;
+  font-weight:500;
+}
+.intro .intro-body .intro-text {
+  font-size: 18px;
+}
+
 /*desktop*/
 @media (min-width: 768px) {
   .intro {
@@ -247,18 +259,6 @@ a:focus {
             6px 6px 0px rgba(255, 255, 255, 0.2);
     font-size: 80%;
   }
-}
-
-.intro .intro-body {
-display: table-cell;
-vertical-align: middle;
-}
-.intro .intro-body {
-font-size: 40px;
-font-weight:500;
-}
-.intro .intro-body .intro-text {
-font-size: 18px;
 }
 
 .btn-circle {
