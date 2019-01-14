@@ -162,7 +162,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/pattern.svg);
+  /* background: url(../img/pattern.svg);*/
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -559,13 +559,23 @@ body {
     width: 100%;
     padding: 60px 0;
     margin-top: 30px;
-    background: url(../img/moutain_alps.jpg);
+    background: url(../img/pattern.svg);
     
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.shadow{
+  background-color: black;
+  box-shadow: 0 0 6px 6px black;
+}
+
+#contact label, #copyright{
+  background-color: black;
+  box-shadow: 0 0 3px 3px black;
 }
 
 /*===== well-dark =====*/
@@ -669,4 +679,11 @@ body {
   margin-bottom: 20px !important;
 }
 
-
+.particles-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+  }

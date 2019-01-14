@@ -100,10 +100,10 @@ $technologies = GetTechnologies();
 
     <!-- Intro Header -->
     <header class="intro fullHeight">
-        <div class="intro-body">
+        <div class="intro-body">      
+        <div id="particles_effect" class="particles-effect"></div>  
             <div class="container">
                 <div class="row">
-
                     <div class="col-md-8 col-md-offset-2" id="intro-title" style="display: none">
                         <h1 class="shadow-header"><span class="code">&gt;</span><?php echo $r->hello ?>!<span class="blink_text code">_</span></h1>
                         <a href="#about" class="btn btn-circle page-scroll">
@@ -219,8 +219,8 @@ $technologies = GetTechnologies();
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
 
-                <h2><?php echo $r->contactme ?></h2>
-                <p><?php echo $r->contactmedetail ?></p>
+                <h2 class="shadow"><?php echo $r->contactme ?></h2>
+                <p class="shadow"><?php echo $r->contactmedetail ?></p>
 
             </div>
             <div class="col-md-6 col-md-offset-3" >
@@ -282,11 +282,16 @@ $technologies = GetTechnologies();
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     
+    <!-- Swal2 -->
     <script src="vendor/swal2/sweetalert2.all.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/behavior.js"></script>
     <script src="./js/contactform.js"></script>
+
+    <!-- Particle.js -->
+    <script src="./js/particles/particles.min.js"></script>
+    <script src="./js/particles/particles-app.js"></script>
  
 </body>
 
