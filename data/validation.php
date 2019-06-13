@@ -5,19 +5,6 @@
  * Copyright © 2017 Olivier Brassard. All rights reserved.
  */
 
-function db_connect(){
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=portfolio;charset=utf8', 'root', 'root');
-        $bdd -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $bdd;
-    }
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
-}
-
 function validatePost($field){
 
     if (isset($_POST[$field]) and $_POST[$field] != ""){
@@ -45,7 +32,6 @@ function validateGet($field)
         return false;
     }
 }
-
 
 
 ?>

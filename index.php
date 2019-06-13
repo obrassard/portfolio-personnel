@@ -1,17 +1,15 @@
 <?php
-require_once "data/db_projects.php";
-require_once "data/db_technologies.php";
+require_once "data/data_service.php";
 
-$lang_json = json_decode(file_get_contents('./lang.json')); 
-
-if (isset($_GET['lang']) && $_GET['lang']=="en"){
-    $projects = GetProjectsEn();
-    $r = $lang_json->en;
+$translations = json_decode(file_get_contents('./lang.json')); 
+$lang = (isset($_GET['lang']) && $_GET['lang']=="en") ? "en":"fr";
+if ($lang == "en"){
+    $r = $translations->en;
 } else {
-    $projects = GetProjectsFr();
-    $r = $lang_json->fr;
+    $r = $translations->fr;
 }
 
+$projects = GetProjects();
 $technologies = GetTechnologies();
 
 ?>
@@ -39,15 +37,15 @@ $technologies = GetTechnologies();
     <title>Olivier Brassard</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="packages/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="packages/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
     <link href="css/fa-colored.css" rel="stylesheet" type="text/css">
 
     <!-- Swal-->
-    <!-- <link href="vendor/swal2/sweetalert2.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="packages/swal2/sweetalert2.min.css" rel="stylesheet" type="text/css"> -->
 
     <!-- Theme CSS -->
     <link href="css/theme.css" rel="stylesheet">
@@ -128,6 +126,7 @@ $technologies = GetTechnologies();
         </div>
     </section>
 
+    
     <!-- Technologies Section -->
     <section id="technologies" class="container content-section text-center">
         <div class="row">
@@ -139,14 +138,14 @@ $technologies = GetTechnologies();
             <div class="row">
                 <?php foreach ( $technologies as $techno ) { ?>
                     <div class="col-md-2 col-sm-3 col-xs-4">
-                        <a href="<?php echo $techno['url'] ?>" target="_blank">
+                        <a href="<?php echo $techno['url'] ?? '' ?>" target="_blank">
                             <div class="card-body well well-dark tech">
                                 <img src="img/technologies/<?php echo $techno['image'] ?>" width="150px" alt="<?php echo $techno['name'] ?>"/>
                                 <p class="tech-txt"><?php echo $techno['name'] ?></p>
                             </div>
                         </a>
                     </div>
-                <? } ?>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -165,16 +164,16 @@ $technologies = GetTechnologies();
                     foreach ( $projects as $oneproject ) {
                         if($cpt == 0) { echo "<div class='row'>";} ?>
 
-                        <div class="col-sm-4 portfolio-item" data-url="<?php echo $oneproject['Url'] ?>">
+                        <div class="col-sm-4 portfolio-item" data-url="<?php echo $oneproject['url'] ?>">
                             <div class="bgimg">
-                                <img src="img/portfolio/<?php echo $oneproject['Image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
+                                <img src="img/portfolio/<?php echo $oneproject['image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
                             </div>
                             <p class="description">
-                                <?php echo $oneproject['Caption'] ?>
+                                <?php echo $oneproject['caption'][$lang] ?>
                             </p>
                             <div class="project-detail hidden">
-                                <div class="title"><?php echo $oneproject['Title'] ?></div>
-                                <div class="details"><?php echo $oneproject['Description'] ?></div>
+                                <div class="title"><?php echo $oneproject['title'] ?></div>
+                                <div class="details"><?php echo $oneproject['description'][$lang] ?></div>
                             </div>
                         </div>
 
@@ -275,15 +274,15 @@ $technologies = GetTechnologies();
     </template>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
+    <script src="packages/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/api.github.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="packages/bootstrap/js/bootstrap.min.js"></script>
     
     <!-- Swal2 -->
-    <script src="vendor/swal2/sweetalert2.all.js"></script>
+    <script src="packages/swal2/sweetalert2.all.js"></script>
 
     <!-- TypeIt -->
     <script src="./js/typeit/typeit.min.js"></script>
@@ -297,5 +296,4 @@ $technologies = GetTechnologies();
     <script src="./js/particles/particles-app.js"></script>
  
 </body>
-
 </html>

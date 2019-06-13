@@ -1,4 +1,7 @@
 
 *.iml
-
 *.xml
+
+vendor/
+
+data/env\.php
