@@ -1,10 +1,8 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/env.php';
-
 
 $mongo = new MongoDB\Client(
-    'mongodb://'.$env['DB_USER'].':'.$env["DB_PASSWORD"].'@'.$env["CLUSTER"]
+    getenv("CONNECTION_STRING")
 );
 
 $db = $mongo->portfolio;
