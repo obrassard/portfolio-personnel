@@ -4,4 +4,4 @@
 
 vendor/
 
-data/env\.php
+\.env
