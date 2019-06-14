@@ -1,5 +1,9 @@
 <?php
+
 require __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::create(__DIR__.'/../');
+$dotenv->load();
 
 $mongo = new MongoDB\Client(
     getenv("CONNECTION_STRING")
