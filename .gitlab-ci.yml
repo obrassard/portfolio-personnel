@@ -4,7 +4,7 @@ stages:
 variables:
   APP_NAME: portfolio
 
-deploy:
+deploy to dokku:
   image: ilyasemenov/gitlab-ci-git-push
   stage: deploy
   environment:
