@@ -7,6 +7,7 @@ $.getJSON(apiUrl, function(data) {
     } else {
         $("#githubProjects").append('<div class="col-md-12"><h4 class="text-center">Projets Github</h4><hr></div>');
         $.each(data, function(key, value) {
+            if (value.language == null) { value.language = 'Markdown' }
             $("#AllProjects").append(
                 '<div class="well git">' +
                 '<a href="'+ value.html_url+'"><div class="title">'+value.full_name+'</div></a>' +

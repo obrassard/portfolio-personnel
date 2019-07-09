@@ -1,18 +1,21 @@
 
 //Fadein animation of the header
 $(document).ready(function () {
-    $('.active').removeClass('active')
-    $('.hidden').addClass('active')
 
-    //Intro
-    //$('#intro-title').delay(800).fadeIn(3000);
-    new TypeIt('#intro-typed', {
-		loop: false,
-		breakLines: false,
-        waitUntilVisible: false,
-        speed: 80,
-        cursorChar: '_'
-	  }).go();
+    lang = $('html').attr('lang');
+    greeting = lang == 'fr' ? 'Bonjour !':'Welcome !'
+      
+    setTimeout(function(){
+        $('#loader').fadeOut('slow');
+        new TypeIt('#intro-typed', {
+            loop: false,
+            breakLines: false,
+            waitUntilVisible: true,
+            speed: 80,
+            strings: greeting,
+            cursorChar: '_'
+          }).go();
+    }, 1000)
 });
 
 
