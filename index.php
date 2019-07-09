@@ -15,7 +15,7 @@ $technologies = GetTechnologies();
 
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?php echo $lang?>">
 <head>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -53,6 +53,14 @@ $technologies = GetTechnologies();
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <div class="spinner-splash" id="loader">
+        <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        </div>
+    </div>
+    
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -104,7 +112,7 @@ $technologies = GetTechnologies();
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2" id="intro-title">
-                        <h1 class="shadow-header"><span class="code">&gt;</span><span id="intro-typed"><?php echo $r->hello ?>!</span><!-- <span class="blink_text code">_</span>--></h1>
+                        <h1 class="shadow-header"><span class="code">&gt;</span><span id="intro-typed"></span><!-- <span class="blink_text code">_</span>--></h1>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -274,6 +282,10 @@ $technologies = GetTechnologies();
         <?php echo $r->swalbtntext?>
     </template>
 
+
+    <!-- TypeIt -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit/dist/typeit.min.js"></script>
+
     <!-- jQuery -->
     <script src="packages/jquery/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
@@ -284,9 +296,6 @@ $technologies = GetTechnologies();
     
     <!-- Swal2 -->
     <script src="packages/swal2/sweetalert2.all.js"></script>
-
-    <!-- TypeIt -->
-    <script src="./js/typeit/typeit.min.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/behavior.js"></script>

@@ -723,6 +723,10 @@
         "color": "#f97732",
         "url": "https://github.com/trending?l=Mask"
     },
+    "Markdown": {
+        "color": "#eee",
+        "url": "https://github.com/"
+    },
     "Mathematica": {
         "color": null,
         "url": "https://github.com/trending?l=Mathematica"
