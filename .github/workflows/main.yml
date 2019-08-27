@@ -12,7 +12,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt install openssh-client git
-
       - name: Configure SSH KEY
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
@@ -20,7 +19,6 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-
     - name: Push to Dokku
       env: 
         HOST: ${{ secrets.HOST }}
