@@ -25,5 +25,5 @@ jobs:
       env: 
         HOST: ${{ secrets.HOST }}
         APP_NAME: ${{ secrets.APP_NAME }}
-      run: git push ssh://dokku@$HOST:22/$APP_NAME master --force
+      run: git push ssh://dokku@$HOST:22/$APP_NAME HEAD:refs/heads/master --force
 
