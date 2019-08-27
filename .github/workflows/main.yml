@@ -19,6 +19,8 @@ jobs:
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
+    - name: Cloning repo
+      uses: actions/checkout@master
     - name: Push to Dokku
       env: 
         HOST: ${{ secrets.HOST }}
