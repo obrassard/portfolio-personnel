@@ -1,0 +1,29 @@
+name: Deploy to Dokku
+on:
+  push:
+    branches:
+    - master
+jobs:
+  deploy:
+    name: Deploy to Dokku
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Ubuntu Packages
+        run: |
+          sudo apt update
+          sudo apt install openssh-client git
+
+      - name: Configure SSH KEY
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+    - name: Push to Dokku
+      env: 
+        HOST: ${{ secrets.HOST }}
+        APP_NAME: ${{ secrets.APP_NAME }}
+      run: git push ssh://dokku@$HOST:22/$APP_NAME master --force
+
