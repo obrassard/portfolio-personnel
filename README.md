@@ -1,7 +1,5 @@
 # Mon portfolio personnel
 
-[![pipeline status](https://gitlab.com/obrassard/portfolio-personnel/badges/master/pipeline.svg)](https://gitlab.com/obrassard/portfolio-personnel/commits/master)
-
 Hello world ! Je suis un étudiant canadien en génie logiciel et ceci est le portfolio de mes projets personnels. 
 Je suis créatif, dynamique et j'adore travailler en équipe! 
 
