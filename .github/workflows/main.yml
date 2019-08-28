@@ -15,15 +15,17 @@ jobs:
     - name: Configure SSH KEY
       env:
         SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        DOKKU_REPO: ${{ secrets.DOKKU_REPO }}
       run: |
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
+        ssh_host=$(echo $url | sed 's/.*@//' | sed 's/[:/].*//')
+        ssh-keyscan -H 22 "$ssh_host" >> ~/.ssh/known_hosts
     - name: Cloning repo
       uses: actions/checkout@master
     - name: Push to Dokku
       env: 
-        HOST: ${{ secrets.HOST }}
-        APP_NAME: ${{ secrets.APP_NAME }}
-      run: git push ssh://dokku@$HOST:22/$APP_NAME HEAD:refs/heads/master --force
+        DOKKU_REPO: ${{ secrets.DOKKU_REPO }}
+      run: git push $DOKKU_REPO HEAD:refs/heads/master --force
 
