@@ -171,8 +171,12 @@ $technologies = GetTechnologies();
                     $cpt = 0;
 
                     foreach ( $projects as $oneproject ) {
-                        if($cpt == 0) { echo "<div class='row'>";} ?>
-
+                        if($cpt == 0) { echo "<div class='row'>";} 
+                        
+                        if (isset($oneproject['display']) && $oneproject['display'] == false){
+                            continue;
+                        }?>
+                        
                         <div class="col-sm-4 portfolio-item" data-url="<?php echo $oneproject['url'] ?>">
                             <div class="bgimg">
                                 <img src="img/portfolio/<?php echo $oneproject['image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
