@@ -1,6 +1,6 @@
 
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i|Oswald:300,400,500,600,700|Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i|Bungee+Outline|Fugaz+One&display=swap');
 
 body {
   width: 100%;
@@ -20,7 +20,8 @@ html {
   height: 100%;
 }
 h1{
-  font-family:"Oswald", "Montserrat", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"Fugaz One", "Montserrat", "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
 }
 h2,
@@ -31,8 +32,8 @@ h6
 {
   margin: 0 0 35px;
   text-transform: uppercase;
-  font-family: "Oswald","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight:500;
+  font-family: "Fugaz One","Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:600;
   letter-spacing: 1px;
 }
 
@@ -163,20 +164,21 @@ a:focus {
 
 .shadow-header {
   color: white;
-  letter-spacing: .05em;
+  /* letter-spacing: .05em; */
   text-transform: uppercase;
-  font-weight: 500;
-  background: black;
-  box-shadow: 0 0 20px 20px black;
+  /* background: black; */
+  /* box-shadow: 0 0 20px 20px black; */
   width: fit-content;
   margin: 50px auto;
-  font-family: "Montserrat";
-  font-weight: 300;
+  font-family: "Bungee Outline";
+  font-weight: normal;
+  /* font-weight: 300; */
 }
 
-.code{
+/* .code{
   font-family: 'Source Code Pro', 'Consolas', 'Roboto Mono', 'Menlo', 'Monaco',monospace;
-}
+  //Import from Google font needed.
+} */
 
 /*Mobile*/
 @media (max-width: 768px) {
@@ -195,10 +197,10 @@ a:focus {
 
   .shadow-header{
 
-    text-shadow:
+    /* text-shadow:
             2px 2px 0px darkgrey,
-            4px 4px 0px rgba(255, 255, 255, 0.2);
-    font-size: 120%;
+            4px 4px 0px rgba(255, 255, 255, 0.2); */
+    font-size: 150%;
   }
 
   @media (max-width: 350px) {
@@ -212,10 +214,10 @@ a:focus {
 /* Even smaller devices */
 @media (max-width: 375px) {
   .shadow-header{
-    text-shadow:
+    /* text-shadow:
             1px 1px 0px darkgrey,
-            2px 2px 0px rgba(255, 255, 255, 0.2);
-    font-size: 90%;
+            2px 2px 0px rgba(255, 255, 255, 0.2); */
+    font-size: 110%;
   }
 }
 
@@ -247,10 +249,10 @@ a:focus {
 
   .shadow-header{
 
-    text-shadow:
+    /* text-shadow:
             3px 3px 0px darkgrey,
-            6px 6px 0px rgba(255, 255, 255, 0.2);
-    font-size: 80%;
+            6px 6px 0px rgba(255, 255, 255, 0.2); */
+    font-size: 110%;
   }
 }
 
@@ -414,34 +416,56 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
-.portfolio-item
-{
-  margin-bottom: 8px;
-}
-
 
 /*B&W*/
 .bw, .bgimg{
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 3px;
 }
 
-.bgimg:hover .bw {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  opacity: 0.5;
-}
+@media (min-width: 769px) {
 
+  .bgimg:hover .bw {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    opacity: 0;
+  }
+
+  .bgimg:hover{
+    background: #2e32f3;
+  }
+  
+  .bgimg:hover .hover-description {
+    opacity: 1;
+  }
+
+}
 
 .bgimg{
   border-radius: 3px;
   background: rgba(0,0,0,0);
 }
 
-.bgimg:hover{
-  background: rgba(0, 183, 255, 1);
+.bgimg .hover-description {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.bgimg .hover-description .fa-plus {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 30px;
 }
 
 .description{
@@ -453,6 +477,11 @@ body {
     border-radius: 3px;
 }
 
+
+.gspaced {
+  margin: 0 !important;
+  padding: 5px !important;
+}
 
 .img-center {
   margin: 0 auto;
@@ -469,6 +498,20 @@ body {
 
 .fullHeight{
   height: 100%;
+}
+
+#portfolio {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .gspaced {
+    padding: 10px 20px !important;
+  }
+  .description {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
 }
 
 /************ Github section  ****************/
@@ -669,7 +712,7 @@ body {
   color: white !important;
   margin-top:8px !important;
   margin-bottom:20px !important;
-  font-family: 'Oswald' !important;
+  font-family: 'Fugaz One' !important;
   text-transform: uppercase !important;
   letter-spacing: 0 !important;
 }
