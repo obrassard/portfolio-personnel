@@ -7,14 +7,14 @@ $(document).ready(function () {
       
     setTimeout(function(){
         $('#loader').fadeOut('slow');
-        new TypeIt('#intro-typed', {
-            loop: false,
-            breakLines: false,
-            waitUntilVisible: true,
-            speed: 80,
-            strings: greeting,
-            cursorChar: '_'
-          }).go();
+        // new TypeIt('#intro-typed', {
+        //     loop: false,
+        //     breakLines: false,
+        //     waitUntilVisible: true,
+        //     speed: 80,
+        //     strings: greeting,
+        //     cursorChar: '_'
+        //   }).go();
     }, 1000)
 });
 

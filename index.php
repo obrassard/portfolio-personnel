@@ -112,7 +112,7 @@ $technologies = GetTechnologies();
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2" id="intro-title">
-                        <h1 class="shadow-header"><span class="code">&gt;</span><span id="intro-typed"></span><!-- <span class="blink_text code">_</span>--></h1>
+                        <h1 class="shadow-header"><?php echo $r->welcome ?></h1>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -160,28 +160,32 @@ $technologies = GetTechnologies();
     </section>
 
     <!-- Project Section -->
-    <section id="project" class="container content-section text-center">
+    <section id="project" class="container-fluid content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2 class="projets"><?php echo $r->myprojects ?></h2>
             </div>
             <section id="portfolio">
-                <div class="container">
+                <div class="container-fluid">
                     <?php
                     $cpt = 0;
 
                     foreach ( $projects as $oneproject ) {
-                        if($cpt == 0) { echo "<div class='row'>";} 
+                        if($cpt == 0) { echo "<div class='row no-gutters'>";} 
                         
                         if (isset($oneproject['display']) && $oneproject['display'] == false){
                             continue;
                         }?>
                         
-                        <div class="col-sm-4 portfolio-item" data-url="<?php echo $oneproject['url'] ?>">
+                        <div class="col-sm-4 portfolio-item gspaced" data-url="<?php echo $oneproject['url'] ?>">
                             <div class="bgimg">
-                                <img src="img/portfolio/<?php echo $oneproject['image'] ?>" class="img-responsive mobile-margin bw bordered" alt="<?php echo $r->altproject ?>">
+                                <img src="img/portfolio/<?php echo $oneproject['image'] ?>" class="img-responsive mobile-margin bw " alt="<?php echo $r->altproject ?>">
+                                <p class=" description hover-description">
+                                    <?php echo $oneproject['caption'][$lang] ?>
+                                    <i class="fa fa-plus"></i>
+                                </p>
                             </div>
-                            <p class="description">
+                            <p class="description visible-xs">
                                 <?php echo $oneproject['caption'][$lang] ?>
                             </p>
                             <div class="project-detail hidden">
