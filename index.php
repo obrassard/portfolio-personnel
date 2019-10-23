@@ -152,7 +152,8 @@ $technologies = GetTechnologies();
                 <?php foreach ( $technologies as $techno ) { ?>
                     <div class="col-md-2 col-sm-3 col-xs-4">
                         <a href="<?php echo $techno['url'] ?? '' ?>" target="_blank">
-                            <div class="card-body well well-dark tech">
+                            <div class="card-body well well-dark" data-aos="zoom-in">
+                                <?php /* To re-enable text hovering add class 'tech'*/ ?>
                                 <img src="img/technologies/<?php echo $techno['image'] ?>" width="150px" alt="<?php echo $techno['name'] ?>"/>
                                 <p class="tech-txt"><?php echo $techno['name'] ?></p>
                             </div>
@@ -184,10 +185,15 @@ $technologies = GetTechnologies();
                         <div class="col-sm-4 portfolio-item gspaced" data-url="<?php echo $oneproject['url'] ?>">
                             <div class="bgimg">
                                 <img src="img/portfolio/<?php echo $oneproject['image'] ?>" class="img-responsive mobile-margin bw " alt="<?php echo $r->altproject ?>">
-                                <p class=" description hover-description">
-                                    <?php echo $oneproject['caption'][$lang] ?>
-                                    <i class="fa fa-plus"></i>
-                                </p>
+                                <div class="description hover-description">
+                                    <h3><?php echo $oneproject['title'] ?></h3>
+                                    <hr>
+                                    <p><?php echo $oneproject['caption'][$lang] ?></p>
+                                </div>
+                                <?php if (isset($oneproject['lang']) ) { ?>
+                                    <span><?php echo $oneproject['lang'] ?></span>
+                                <?php } ?>
+                                <i class="fa fa-plus"></i>
                             </div>
                             <p class="description visible-xs">
                                 <?php echo $oneproject['caption'][$lang] ?>
@@ -230,7 +236,6 @@ $technologies = GetTechnologies();
                 </div>
             </div>
         </div>
-
     </section>
 
     <!-- Contact Section -->
@@ -285,7 +290,8 @@ $technologies = GetTechnologies();
                 <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
                 <li> <a href="mailto:hey@obrassard.ca"><i class="fa fa-envelope"></i></a> </li>
             </ul>
-            <p id="copyright">&copy; Olivier Brassard - <?php echo date("Y"); ?></p><br>
+            <p id="copyright"><span>&copy; Olivier Brassard - <?php echo date("Y"); ?></span></p><br>
+            <img alt="brand" src="img/logo.png" width="50px">
         </div>
     </footer>
     </div>

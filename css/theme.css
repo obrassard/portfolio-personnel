@@ -438,28 +438,87 @@ body {
     background: #2e32f3;
   }
   
-  .bgimg:hover .hover-description {
+  .bgimg:hover .hover-description,
+  .bgimg:hover span,
+  .bgimg:hover i  {
     opacity: 1;
   }
+}
 
+@media (max-width: 1110px){
+
+  .hover-description p {
+    display:none
+  }
 }
 
 .bgimg{
   border-radius: 3px;
   background: rgba(0,0,0,0);
+  position: relative;
 }
 
 .bgimg .hover-description {
+  text-align: left;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: absolute;
   width: 85%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 35px;
+  left: 30px;
   opacity: 0;
+}
+
+.hover-description hr {
+  margin-left: 10px;
+  margin-top: 0px;
+  width: 30px;
+  border-width: 3px;
+}
+
+.hover-description h3 {
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.hover-description p {
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 9px;
+  font-size: 15px;
+}
+
+.bgimg span {
+  position: absolute;
+  background-color: white;
+  color: #2e32f3;
+  padding: 2px 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  right: 20px;
+  bottom: 28px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.bgimg i {
+  position: absolute;
+  color: white;
+  margin-left: 25px;
+  left: 10px;
+  bottom: 28px;
+  font-size: 25px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .bgimg .hover-description .fa-plus {
@@ -469,14 +528,14 @@ body {
 }
 
 .description{
-    margin-top: 8px;
-    font-size: 16px;
-}
-.bordered{
-    border: 1px solid #ffffff;
-    border-radius: 3px;
+  margin-top: 8px;
+  font-size: 16px;
 }
 
+.bordered{
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
 
 .gspaced {
   margin: 0 !important;
@@ -619,9 +678,15 @@ body {
   box-shadow: 0 0 6px 6px black;
 }
 
-#contact label, #copyright{
+#contact label {
   background-color: black;
   box-shadow: 0 0 3px 3px black;
+}
+
+#copyright span {
+  background-color: black;
+  box-shadow: 0 0 3px 3px black;
+  padding: 0px 10px;
 }
 
 /*===== well-dark =====*/
