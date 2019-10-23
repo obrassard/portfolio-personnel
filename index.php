@@ -48,6 +48,10 @@ $technologies = GetTechnologies();
     <!-- Swal-->
     <!-- <link href="packages/swal2/sweetalert2.min.css" rel="stylesheet" type="text/css"> -->
 
+    <!-- Animate -->
+    <link href="packages/animatecss/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Theme CSS -->
     <link href="css/theme.css" rel="stylesheet">
 </head>
@@ -128,8 +132,8 @@ $technologies = GetTechnologies();
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 style="margin-bottom: 25px"><?php echo $r->about ?></h2>
-                    <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="https://github.com/obrassard.png" width="200" alt="<?php echo $r->pofme ?>"></a>
-                    <p id="no-margin"><?php echo $r->welcome_message ?></p>
+                    <a href="http://github.com/obrassard"><img class="img-circle img-responsive img-center" src="https://github.com/obrassard.png" width="200" alt="<?php echo $r->pofme ?>" data-aos="zoom-in"></a>
+                    <p id="no-margin" data-aos="fade-up"><?php echo $r->welcome_message ?></p>
                 </div>
             </div>
         </div>
@@ -305,6 +309,9 @@ $technologies = GetTechnologies();
     <!-- Swal2 -->
     <script src="packages/swal2/sweetalert2.all.js"></script>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
     <!-- Theme JavaScript -->
     <script src="js/behavior.js"></script>
     <script src="./js/contactform.js"></script>

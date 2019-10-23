@@ -1,4 +1,7 @@
-
+function animate(selector, animation) {
+    const element =  document.querySelector(selector)
+    element.classList.add('animated', animation)
+}
 //Fadein animation of the header
 $(document).ready(function () {
 
@@ -7,6 +10,7 @@ $(document).ready(function () {
       
     setTimeout(function(){
         $('#loader').fadeOut('slow');
+        animate('h1.shadow-header','flipInX')
         // new TypeIt('#intro-typed', {
         //     loop: false,
         //     breakLines: false,
@@ -16,6 +20,8 @@ $(document).ready(function () {
         //     cursorChar: '_'
         //   }).go();
     }, 1000)
+
+    AOS.init();
 });
 
 
