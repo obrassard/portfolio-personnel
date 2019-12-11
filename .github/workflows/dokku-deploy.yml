@@ -23,7 +23,7 @@ jobs:
         ssh_host=$(echo $DOKKU_REPO | sed 's/.*@//' | sed 's/[:/].*//')
         ssh-keyscan -H 22 "$ssh_host" >> ~/.ssh/known_hosts
     - name: Cloning repo
-      uses: actions/checkout@master
+      uses: actions/checkout@v1.2.0
     - name: Push to Dokku
       env: 
         DOKKU_REPO: ${{ secrets.DOKKU_REPO }}
