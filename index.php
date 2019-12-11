@@ -286,9 +286,9 @@ $technologies = GetTechnologies();
         <div class="container text-center">
             <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
                 <li><a href="http://github.com/obrassard"><i class="fa fa-github"></i></a> </li>
+                <li> <a href="mailto:hey@obrassard.ca"><i class="fa fa-envelope"></i></a> </li>
                 <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
                 <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
-                <li> <a href="mailto:hey@obrassard.ca"><i class="fa fa-envelope"></i></a> </li>
             </ul>
             <p id="copyright"><span>&copy; Olivier Brassard - <?php echo date("Y"); ?></span></p><br>
             <img alt="brand" src="img/logo.png" width="50px">
