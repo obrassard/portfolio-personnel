@@ -4,12 +4,12 @@ function ValidateForm()
     //Verify empty name
     if (document.getElementById('name').value === "")
     {
-        document.getElementById('name').style.border = "solid 2px red";
+        document.getElementById('name').classList.add('inputError');
         nameOk = false;
 
     }
     else{
-        document.getElementById('name').style.border = "1px solid #ccc";
+        document.getElementById('name').classList.remove('inputError');
     }
 
 
@@ -17,11 +17,11 @@ function ValidateForm()
     var messageOk = true;
     if (document.getElementById('message').value === "")
     {
-        document.getElementById('message').style.border = "solid 2px red";
+        document.getElementById('message').classList.add('inputError');
         messageOk = false;
     }
     else{
-        document.getElementById('message').style.border = "1px solid #ccc";
+        document.getElementById('message').classList.remove('inputError');
 
     }
 
@@ -33,11 +33,11 @@ function ValidateForm()
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(email.match(mailformat))
     {
-        document.getElementById('email').style.border = "1px solid #ccc";
+        document.getElementById('email').classList.remove('inputError');
 
     }
     else {
-        document.getElementById('email').style.border = "solid 2px red";
+        document.getElementById('email').classList.add('inputError');
         emailOk=false;
     }
 

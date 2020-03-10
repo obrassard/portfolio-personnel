@@ -71,7 +71,7 @@ $technologies = GetTechnologies();
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
+                    <span class="collapse-label">Menu</span> <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
                     <table>
@@ -224,6 +224,7 @@ $technologies = GetTechnologies();
         </div>
     </section>
 
+    <!-- GitHub Section -->
     <section id="github-projects" class="content-section text-center">
         <i id="arrow"></i>
         <div class="container">
@@ -242,31 +243,34 @@ $technologies = GetTechnologies();
     <div class="pattern-background">
     <section id="contact" class="lessPadding container content-section ">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h2 class="sign shadow">
+                    <span class="sign__word"><?php echo $r->contactme ?></span>
+                </h2>
 
-                <h2 class="shadow"><?php echo $r->contactme ?></h2>
                 <p class="shadow"><?php echo $r->contactmedetail ?></p>
-
             </div>
-            <div class="col-md-6 col-md-offset-3" >
-                <form id="contactForm" action="https://formspree.io/hey@obrassard.ca" method="POST">
-                    <div class="form-group">
-                        <label for="name"><?php echo $r->frmname ?></label>
-                        <input type="text" class="form-control" id="name" name="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email"><?php echo $r->frmemail ?></label>
-                        <input type="email" class="form-control" id="email" name="_replyto">
-                    </div>
-                    <div class="form-group">
-                        <label for="message"><?php echo $r->frmmessage ?></label>
-                        <textarea class="form-control" id="message" name="message"></textarea>
-                    </div>
-                    <input type="hidden" name="_next" value="http://obrassard.ca/index.php?code=1#contactForm" />
-                    <input type="hidden" name="_subject" value="New message from your website!" />
-                </form>
-                <div class="alert alert-danger" id="alert" style="display: none" role="alert" ><?php echo $r->frmerror ?></div>
-                <button class="btn btn-default pull-right" onclick="ValidateForm()"><?php echo $r->send ?></button>
+            <div class="col-md-8 col-md-offset-2" >
+                <div class="form-wrapper glowing-border">
+                    <form id="contactForm" action="https://formspree.io/hey@obrassard.ca" method="POST">
+                        <div class="form-group">
+                            <label for="name"><?php echo $r->frmname ?></label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><?php echo $r->frmemail ?></label>
+                            <input type="email" class="form-control" id="email" name="_replyto">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><?php echo $r->frmmessage ?></label>
+                            <textarea class="form-control" id="message" name="message"></textarea>
+                        </div>
+                        <input type="hidden" name="_next" value="http://obrassard.ca/index.php?code=1#contactForm" />
+                        <input type="hidden" name="_subject" value="New message from your website!" />
+                    </form>
+                    <div class="alert alert-danger" id="alert" style="display: none" role="alert" ><?php echo $r->frmerror ?></div>
+                    <button class="btn btn-default" onclick="ValidateForm()"><?php echo $r->send ?></button>
+                </div>
             </div>
             <div class="col-md-6 col-md-offset-3">
                 <?php
@@ -295,6 +299,7 @@ $technologies = GetTechnologies();
         </div>
     </footer>
     </div>
+
 
     <template id="swal-btn-text">
         <?php echo $r->swalbtntext?>

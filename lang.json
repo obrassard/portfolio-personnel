@@ -14,7 +14,7 @@
         "frmname":"Nom",
         "frmemail":"Adresse Email",
         "frmmessage":"Votre message",
-        "frmerror":"<strong>Oups!</strong> Veuillez compléter tous les champs.",
+        "frmerror":"<strong>Désolé!</strong> Veuillez compléter tous les champs.",
         "send":"Envoyer",
         "sendconf":"Votre message a été envoyé avec succès!",
         "myprojects":"Projets principaux",
