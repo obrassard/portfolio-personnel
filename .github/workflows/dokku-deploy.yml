@@ -5,27 +5,14 @@ on:
     - master
 jobs:
   deploy:
-    name: Deploy to Dokku
     runs-on: ubuntu-latest
     steps:
-    - name: Install Ubuntu Packages
-      run: |
-        sudo apt update
-        sudo apt install openssh-client git
-    - name: Configure SSH KEY
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        DOKKU_REPO: ${{ secrets.DOKKU_REPO }}
-      run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh_host=$(echo $DOKKU_REPO | sed 's/.*@//' | sed 's/[:/].*//')
-        ssh-keyscan -H 22 "$ssh_host" >> ~/.ssh/known_hosts
-    - name: Cloning repo
-      uses: actions/checkout@v1.2.0
-    - name: Push to Dokku
-      env: 
-        DOKKU_REPO: ${{ secrets.DOKKU_REPO }}
-      run: git push $DOKKU_REPO HEAD:refs/heads/master --force
-
+    - name: Cloning repo 
+      uses: actions/checkout@v2
+    - name: Fetching branches
+      run: git fetch --prune --unshallow 
+    - name: Push to dokku
+      uses: obrassard/action-dokku-deploy@v1.0.0
+      with:
+       dokku_repo: ${{ secrets.DOKKU_REPO }}
+       ssh_key: ${{ secrets.PRIVATE_KEY }}
