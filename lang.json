@@ -37,7 +37,7 @@
         "frmname":"Name",
         "frmemail":"Email Address",
         "frmmessage":"Your message",
-        "frmerror":"<strong>Oh snap!</strong> Please complete all fields.",
+        "frmerror":"<strong>Sorry!</strong> Please complete all fields.",
         "send":"Send",
         "sendconf":"Your message has been successfully sent!",
         "myprojects":"Featured projects",
