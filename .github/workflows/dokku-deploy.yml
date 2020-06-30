@@ -10,7 +10,7 @@ jobs:
     - name: Cloning repo 
       uses: actions/checkout@v2
       with:
-        fetch-dept: 0 
+        fetch-depth: 0 
     - name: Push to dokku
       uses: obrassard/action-dokku-deploy@master
       with:
