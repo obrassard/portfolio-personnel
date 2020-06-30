@@ -9,8 +9,8 @@ jobs:
     steps:
     - name: Cloning repo 
       uses: actions/checkout@v2
-    - name: Fetching branches
-      run: git fetch --prune --unshallow 
+      with:
+        fetch-dept: 0 
     - name: Push to dokku
       uses: obrassard/action-dokku-deploy@master
       with:
