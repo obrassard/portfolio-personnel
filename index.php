@@ -32,10 +32,10 @@ $technologies = GetTechnologies();
     <link rel="icon" type="image/png" href="img/components.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Olivier Brassard">
+    <meta name="author" content="Olivier S. Brassard">
 
 
-    <title>Olivier Brassard</title>
+    <title>Olivier S. Brassard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="packages/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,7 +77,7 @@ $technologies = GetTechnologies();
                     <table>
                         <tr>
                             <td  class="brand-logo" style="padding-right: 10px; border-right: white solid 1px"><img alt="Brand" src="img/logo.png" width="20px"></td>
-                            <td style="padding-left: 10px"><span class="light">Olivier</span> Brassard</td>
+                            <td style="padding-left: 10px"><span class="light">Olivier S.</span> Brassard</td>
                         </tr>
                     </table>
                 </a>
@@ -294,7 +294,7 @@ $technologies = GetTechnologies();
                 <li> <a href="http://twitter.com/br4ss4rdo"><i class="fa fa-twitter"></i></a> </li>
                 <li> <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin-square"></i></a> </li>
             </ul>
-            <p id="copyright"><span>&copy; Olivier Brassard - <?php echo date("Y"); ?></span></p><br>
+            <p id="copyright"><span>&copy; Olivier S. Brassard - <?php echo date("Y"); ?></span></p><br>
             <img alt="brand" src="img/logo.png" width="50px">
         </div>
     </footer>
